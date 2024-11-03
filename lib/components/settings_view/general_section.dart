@@ -3,6 +3,7 @@ import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/controllers/settings_controller.dart';
 
 class GeneralSection extends StatefulWidget {
   const GeneralSection({super.key});
@@ -12,7 +13,17 @@ class GeneralSection extends StatefulWidget {
 }
 
 class _GeneralSectionState extends State<GeneralSection> {
-  final _controller = ValueNotifier<bool>(false);
+  late final ValueNotifier<bool> _controller;
+  final settingsController = SettingsController.instance;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = ValueNotifier<bool>(settingsController.isFreeTrialEnable);
+    _controller.addListener(() {
+      settingsController.isFreeTrialEnable = _controller.value;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +65,7 @@ class _GeneralSectionState extends State<GeneralSection> {
               const Spacer(),
               AdvancedSwitch(
                 controller: _controller,
+                initialValue: settingsController.isNotificationEnable,
                 activeColor: Colors.green,
                 inactiveColor: Colors.grey,
                 activeChild: const Text('I'),

@@ -6,6 +6,7 @@ import 'package:tracking_partner/components/purchase_view/key_features.dart';
 import 'package:tracking_partner/components/purchase_view/plan_button.dart';
 import 'package:tracking_partner/components/purchase_view/purchase_links.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/controllers/settings_controller.dart';
 
 class PurchaseView extends StatefulWidget {
   const PurchaseView({super.key});
@@ -15,7 +16,17 @@ class PurchaseView extends StatefulWidget {
 }
 
 class _PurchaseViewState extends State<PurchaseView> {
-  final _controller = ValueNotifier<bool>(false);
+  late final ValueNotifier<bool> _controller;
+  final settingsController = SettingsController.instance;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = ValueNotifier<bool>(settingsController.isFreeTrialEnable);
+    _controller.addListener(() {
+      settingsController.isFreeTrialEnable = _controller.value;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +79,7 @@ class _PurchaseViewState extends State<PurchaseView> {
                   inactiveColor: Colors.grey,
                   activeChild: const Text('I'),
                   inactiveChild: const Text('O'),
+                  initialValue: settingsController.isFreeTrialEnable,
                   width: 36.w,
                   height: 18.h,
                   enabled: true,
