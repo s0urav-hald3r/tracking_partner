@@ -5,9 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
 
 class HomePageTopSection extends StatelessWidget {
-  const HomePageTopSection({
-    super.key,
-  });
+  const HomePageTopSection({super.key});
 
   @override
   Widget build(BuildContext context) {
