@@ -1,10 +1,12 @@
-// Image constants
 import 'package:flutter/material.dart';
 
+// Image constants
 const String onboardingOneImage = 'assets/images/onboarding_1.png';
 const String onboardingTwoImage = 'assets/images/onboarding_2.png';
 const String onboardingThreeImage = 'assets/images/onboarding_3.png';
 const String onboardingFourImage = 'assets/images/onboarding_4.png';
+
+const String dashboardFAB = 'assets/images/dashboardFAB.png';
 
 // String constants
 const String onboardingOneTitle = 'See the full tracking history';
@@ -28,4 +30,5 @@ const String onboardingFourSubTitle =
 // Color constants
 const Color primaryColor = Color(0xFFFFB939);
 const Color textColor = Color(0xFF000000);
-const Color descriptionColor = Color(0xFF404040);
+const Color secondaryColor = Color(0xFF404040);
+const Color greyColor = Color(0xFF828282);

@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/controllers/dashboard_controller.dart';
 import 'package:tracking_partner/controllers/onboarding_controller.dart';
 import 'package:tracking_partner/views/onboarding_view.dart';
 
 void main() {
   // Dependency injection
   Get.lazyPut(() => OnboardingController());
+  Get.lazyPut(() => DashboardController());
 
   runApp(const MyApp());
 }

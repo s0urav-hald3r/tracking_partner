@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/onboarding_controller.dart';
+import 'package:tracking_partner/views/dashboard_view.dart';
 
 class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
@@ -100,6 +102,7 @@ class _OnboardingViewState extends State<OnboardingView> {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 24.sp,
+              color: textColor,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -108,6 +111,7 @@ class _OnboardingViewState extends State<OnboardingView> {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 14.sp,
+              color: secondaryColor,
               fontWeight: FontWeight.w400,
             ),
           ),
@@ -123,6 +127,10 @@ class _OnboardingViewState extends State<OnboardingView> {
       child: ElevatedButton(
         onPressed: () {
           // Define action here
+          Navigator.pushReplacement(
+            context,
+            CupertinoPageRoute(builder: (context) => const DashboardView()),
+          );
         },
         style: ElevatedButton.styleFrom(
           minimumSize: Size(double.infinity, 45.h),
