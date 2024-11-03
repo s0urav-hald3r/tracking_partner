@@ -19,7 +19,7 @@ class _SettingsViewState extends State<SettingsView> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const TopSection(),
-          SizedBox(height: (65 + 20).h),
+          SizedBox(height: 20.h),
           Padding(
             padding: EdgeInsets.only(left: 20.w),
             child: Text(

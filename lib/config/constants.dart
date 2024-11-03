@@ -15,6 +15,11 @@ const String barcode = 'assets/svgs/barcode.svg';
 const String share = 'assets/svgs/share.svg';
 const String feedback = 'assets/svgs/feedback.svg';
 const String bell = 'assets/svgs/bell.svg';
+const String close = 'assets/svgs/close.svg';
+const String premiumBaner = 'assets/svgs/premium_baner.svg';
+const String courier = 'assets/svgs/courier.svg';
+const String unlimitedParcel = 'assets/svgs/unlimited_parcel.svg';
+const String courierDitection = 'assets/svgs/courier_detection.svg';
 
 // String constants
 const String onboardingOneTitle = 'See the full tracking history';

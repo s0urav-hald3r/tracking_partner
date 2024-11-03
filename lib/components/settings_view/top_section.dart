@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/views/purchase_view.dart';
 
 class TopSection extends StatelessWidget {
   const TopSection({super.key});
@@ -28,6 +30,7 @@ class TopSection extends StatelessWidget {
             20.w,
             20.h,
           ),
+          margin: EdgeInsets.only(bottom: 65.h),
           child: Text(
             'Settings',
             textAlign: TextAlign.start,
@@ -39,7 +42,7 @@ class TopSection extends StatelessWidget {
           ),
         ),
         Positioned(
-          bottom: -65.h,
+          top: 115.h,
           child: Container(
             width: 335.w,
             height: 130.h,
@@ -81,6 +84,11 @@ class TopSection extends StatelessWidget {
                       child: ElevatedButton(
                         onPressed: () {
                           // Define action here
+                          Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                                builder: (context) => const PurchaseView()),
+                          );
                         },
                         child: Text(
                           'Unlock All',
