@@ -7,6 +7,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/dashboard_controller.dart';
 import 'package:tracking_partner/views/home_view.dart';
+import 'package:tracking_partner/views/settings_view.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({super.key});
@@ -21,8 +22,10 @@ class _DashboardViewState extends State<DashboardView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(() =>
-          [const HomeView(), Container()][dashboardController.currentIndex]),
+      body: Obx(() => [
+            const HomeView(),
+            const SettingsView()
+          ][dashboardController.currentIndex]),
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
         onPressed: () {},

@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
 
-class HomePageTopSection extends StatelessWidget {
-  const HomePageTopSection({super.key});
+class TopSection extends StatelessWidget {
+  const TopSection({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tracking_partner/components/home_page_top_section.dart';
-import 'package:tracking_partner/components/parcel_card.dart';
+import 'package:tracking_partner/components/home_view/top_section.dart';
+import 'package:tracking_partner/components/home_view/parcel_card.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -16,7 +16,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       body: Column(
         children: [
-          const HomePageTopSection(),
+          const TopSection(),
           Expanded(
             child: ListView.builder(
               itemCount: 15,
