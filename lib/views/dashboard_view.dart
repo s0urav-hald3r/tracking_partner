@@ -32,6 +32,7 @@ class _DashboardViewState extends State<DashboardView> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: Obx(
         () => AnimatedBottomNavigationBar(
+          shadow: BoxShadow(blurRadius: 10, color: Colors.grey.shade300),
           icons: const [Iconsax.home_2, Iconsax.setting_2],
           activeIndex: dashboardController.currentIndex,
           iconSize: 24.sp,
