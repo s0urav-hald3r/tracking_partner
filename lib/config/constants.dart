@@ -6,7 +6,11 @@ const String onboardingTwoImage = 'assets/images/onboarding_2.png';
 const String onboardingThreeImage = 'assets/images/onboarding_3.png';
 const String onboardingFourImage = 'assets/images/onboarding_4.png';
 
-const String dashboardFAB = 'assets/images/dashboardFAB.png';
+// SVG constants
+const String add = 'assets/svgs/add.svg';
+const String parcel = 'assets/svgs/parcel.svg';
+const String gps = 'assets/svgs/gps.svg';
+const String barcode = 'assets/svgs/barcode.svg';
 
 // String constants
 const String onboardingOneTitle = 'See the full tracking history';
