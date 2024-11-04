@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             useMaterial3: true,
             fontFamily: 'Plus Jakarta Sans',
-            // scaffoldBackgroundColor: const Color(0xFFEEEEEE),
+            scaffoldBackgroundColor: const Color(0xFFFBFBFB),
             splashFactory: NoSplash.splashFactory,
             splashColor: Colors.transparent,
             hoverColor: Colors.transparent,
