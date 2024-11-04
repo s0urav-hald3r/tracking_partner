@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:tracking_partner/components/purchase_view/key_features.dart';
 import 'package:tracking_partner/components/purchase_view/plan_button.dart';
 import 'package:tracking_partner/components/purchase_view/purchase_links.dart';
@@ -94,11 +95,15 @@ class _PurchaseViewState extends State<PurchaseView> {
                 onPressed: () {
                   // Define action here
                 },
-                child: Text(
-                  'Try For FREE',
-                  style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w700,
+                child: Obx(
+                  () => Text(
+                    settingsController.plan == Plan.FREE
+                        ? 'Try For FREE'
+                        : 'Purchase Plan',
+                    style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),
