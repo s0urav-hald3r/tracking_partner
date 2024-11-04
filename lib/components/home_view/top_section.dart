@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/views/new_parcel_view.dart';
 import 'package:tracking_partner/views/scan_view.dart';
 
 class TopSection extends StatelessWidget {
@@ -50,7 +51,15 @@ class TopSection extends StatelessWidget {
                   ),
                 ],
               ),
-              SvgPicture.asset(add)
+              InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const NewParcelView()),
+                    );
+                  },
+                  child: SvgPicture.asset(add))
             ],
           ),
           const Spacer(),
@@ -73,7 +82,7 @@ class TopSection extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       color: secondaryColor,
                     ),
-                    placeholder: 'Enter tracking id',
+                    placeholder: 'Enter Tracking  Number...',
                     placeholderStyle: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500,
