@@ -1,3 +1,4 @@
+import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -101,22 +102,39 @@ class _NewParcelViewState extends State<NewParcelView> {
           Container(
             height: 45.h,
             margin: EdgeInsets.symmetric(horizontal: 20.w),
-            child: CupertinoTextField(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: primaryColor),
-                borderRadius: BorderRadius.circular(10.r),
+            child: CustomDropdown<String>(
+              hintText: 'Select carrier partner',
+              closedHeaderPadding:
+                  EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+              decoration: CustomDropdownDecoration(
+                closedSuffixIcon: const Icon(Icons.keyboard_arrow_down),
+                expandedSuffixIcon: const Icon(Icons.keyboard_arrow_up),
+                closedFillColor: Colors.white,
+                closedBorder: Border.all(color: primaryColor),
+                closedBorderRadius: BorderRadius.circular(10.r),
+                hintStyle: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w600,
+                  color: secondaryColor.withOpacity(.5),
+                ),
+                headerStyle: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w600,
+                  color: primaryColor,
+                ),
+                listItemStyle: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w600,
+                  color: textColor,
+                ),
               ),
-              padding: EdgeInsets.only(left: 10.w),
-              suffix: Padding(
-                padding: EdgeInsets.only(right: 10.w, left: 10.w),
-                child: const Icon(Icons.keyboard_arrow_down_rounded),
-              ),
-              style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w600,
-                color: primaryColor,
-              ),
+              items: const [
+                'Developer',
+                'Designer',
+                'Consultant',
+                'Student',
+              ],
+              onChanged: (value) {},
             ),
           ),
           Padding(
