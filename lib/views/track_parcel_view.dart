@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tracking_partner/components/track_parcel_view/top_card.dart';
+import 'package:tracking_partner/components/track_parcel_view/track_section.dart';
 import 'package:tracking_partner/config/constants.dart';
 
 class TrackParcelView extends StatelessWidget {
@@ -26,10 +27,28 @@ class TrackParcelView extends StatelessWidget {
           ),
         ),
       ),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          TopCard(),
+          const TopCard(),
+          const TrackSection(),
+          Container(
+            height: 45.h,
+            width: double.infinity,
+            margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+            child: ElevatedButton(
+              onPressed: () {
+                // Define action here
+              },
+              child: Text(
+                'View Parcel Items',
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
