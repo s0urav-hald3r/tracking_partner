@@ -45,3 +45,6 @@ const Color primaryColor = Color(0xFFFFB939);
 const Color textColor = Color(0xFF000000);
 const Color secondaryColor = Color(0xFF404040);
 const Color greyColor = Color(0xFF828282);
+
+// Storage contants
+const String isOnboardingDone = 'isOnboardingDone';

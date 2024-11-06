@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/onboarding_controller.dart';
+import 'package:tracking_partner/utlis/local_storage.dart';
 import 'package:tracking_partner/views/dashboard_view.dart';
 
 class OnboardingView extends StatefulWidget {
@@ -126,6 +127,8 @@ class _OnboardingViewState extends State<OnboardingView> {
       margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
       child: ElevatedButton(
         onPressed: () {
+          LocalStorage.addData(isOnboardingDone, true);
+
           // Define action here
           Navigator.pushReplacement(
             context,
