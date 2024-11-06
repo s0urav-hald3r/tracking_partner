@@ -43,6 +43,7 @@ dependencies:
   qr_code_scanner: ^1.0.1
   animated_custom_dropdown: ^3.1.1
   infinite_carousel: ^1.1.1
+  dotted_line: ^3.2.3
 
 dev_dependencies:
   flutter_test:
