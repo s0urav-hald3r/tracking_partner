@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/views/scan_view.dart';
 
 class TrackingNumberSection extends StatelessWidget {
   const TrackingNumberSection({super.key});
@@ -34,9 +35,17 @@ class TrackingNumberSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(10.r),
             ),
             padding: EdgeInsets.only(left: 10.w),
-            suffix: Padding(
-              padding: EdgeInsets.only(right: 10.w, left: 10.w),
-              child: SvgPicture.asset(barcode),
+            suffix: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(builder: (context) => const ScanView()),
+                );
+              },
+              child: Padding(
+                padding: EdgeInsets.only(right: 10.w, left: 10.w),
+                child: SvgPicture.asset(barcode),
+              ),
             ),
             style: TextStyle(
               fontSize: 14.sp,

@@ -19,6 +19,12 @@ class _PackageIconSectionState extends State<PackageIconSection> {
   final List _icons = ['👞', '📱', '📦', '💻', '👕', '💄', '⚽️', '🕶️'];
 
   @override
+  void dispose() {
+    controller.iconIndex = 0;
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
