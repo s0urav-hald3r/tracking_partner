@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tracking_partner/components/new_parcel_view/carrier_section.dart';
-import 'package:tracking_partner/components/new_parcel_view/description_section.dart';
+import 'package:tracking_partner/components/new_parcel_view/parcel_name_section.dart';
 import 'package:tracking_partner/components/new_parcel_view/package_icon_section.dart';
 import 'package:tracking_partner/components/new_parcel_view/tracking_number_section.dart';
 import 'package:tracking_partner/config/constants.dart';
@@ -35,7 +35,7 @@ class NewParcelView extends StatelessWidget {
           const PackageIconSection(),
           const TrackingNumberSection(),
           const CarrierSection(),
-          const DescriptionSection(),
+          const ParcelNameSection(),
           const Spacer(),
           Container(
             height: 45.h,

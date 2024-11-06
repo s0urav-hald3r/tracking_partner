@@ -46,7 +46,7 @@ class ParcelCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'J002576877423000',
+                'Parcel name',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14.sp,
@@ -55,7 +55,7 @@ class ParcelCard extends StatelessWidget {
                 ),
               ),
               Text(
-                '13 July, 09:45 PM',
+                'J002576877423000',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 12.sp,

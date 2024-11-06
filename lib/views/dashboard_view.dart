@@ -1,4 +1,5 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -7,6 +8,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/dashboard_controller.dart';
 import 'package:tracking_partner/views/home_view.dart';
+import 'package:tracking_partner/views/new_parcel_view.dart';
 import 'package:tracking_partner/views/settings_view.dart';
 
 class DashboardView extends StatefulWidget {
@@ -28,7 +30,12 @@ class _DashboardViewState extends State<DashboardView> {
           ][dashboardController.currentIndex]),
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            CupertinoPageRoute(builder: (context) => const NewParcelView()),
+          );
+        },
         backgroundColor: primaryColor,
         child: SvgPicture.asset(parcel),
       ),

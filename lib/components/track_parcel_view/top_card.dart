@@ -43,7 +43,7 @@ class TopCard extends StatelessWidget {
                 children: [
                   SizedBox(height: 2.5.h),
                   Text(
-                    'J002576877423000',
+                    'Parcel name',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14.sp,
@@ -53,7 +53,7 @@ class TopCard extends StatelessWidget {
                   ),
                   SizedBox(height: 2.5.h),
                   Text(
-                    '13 July, 09:45 PM',
+                    'J002576877423000',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12.sp,
