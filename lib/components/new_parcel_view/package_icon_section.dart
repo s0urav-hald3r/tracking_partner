@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:infinite_carousel/infinite_carousel.dart';
 import 'package:tracking_partner/config/constants.dart';
-import 'package:tracking_partner/controllers/dashboard_controller.dart';
+import 'package:tracking_partner/controllers/home_controller.dart';
 
 class PackageIconSection extends StatefulWidget {
   const PackageIconSection({super.key});
@@ -13,10 +13,7 @@ class PackageIconSection extends StatefulWidget {
 }
 
 class _PackageIconSectionState extends State<PackageIconSection> {
-  final controller = DashboardController.instance;
-
-  // List of icons to display in the list
-  final List _icons = ['👞', '📱', '📦', '💻', '👕', '💄', '⚽️', '🕶️'];
+  final controller = HomeController.instance;
 
   @override
   void dispose() {
@@ -44,15 +41,15 @@ class _PackageIconSectionState extends State<PackageIconSection> {
         SizedBox(
           height: 60.h,
           child: InfiniteCarousel.builder(
-            itemCount: _icons.length,
+            itemCount: controller.parcelIcons.length,
             itemExtent: 70.w,
             center: true,
             anchor: 0.0,
             velocityFactor: 0.2,
             onIndexChanged: (index) {
+              controller.parcelIcon = controller.parcelIcons[index];
               controller.iconIndex = index;
             },
-            // controller: controller,
             axisDirection: Axis.horizontal,
             loop: true,
             itemBuilder: (context, index, realIndex) {
@@ -76,7 +73,7 @@ class _PackageIconSectionState extends State<PackageIconSection> {
                   ),
                   child: Center(
                     child: Text(
-                      _icons[index],
+                      controller.parcelIcons[index],
                       style: TextStyle(
                         fontSize: index == controller.iconIndex ? 26.sp : 20.sp,
                         color: index == controller.iconIndex

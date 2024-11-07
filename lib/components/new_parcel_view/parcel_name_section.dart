@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/controllers/home_controller.dart';
 
 class ParcelNameSection extends StatelessWidget {
   const ParcelNameSection({super.key});
@@ -27,6 +28,7 @@ class ParcelNameSection extends StatelessWidget {
           height: 45.h,
           margin: EdgeInsets.symmetric(horizontal: 20.w),
           child: CupertinoTextField(
+            controller: HomeController.instance.pNameController,
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: const Color(0xFFEEEEEE)),

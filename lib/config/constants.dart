@@ -48,3 +48,6 @@ const Color greyColor = Color(0xFF828282);
 
 // Storage contants
 const String isOnboardingDone = 'isOnboardingDone';
+
+// API keys
+const String tAPIKey = '7cxirso0-xa5b-9uez-sh82-5uzpbknax2be';

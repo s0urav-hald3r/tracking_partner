@@ -23,8 +23,11 @@ class DioClient {
   }
 
   // POST METHOD
-  Future<Response> post(String url, {dynamic body}) async {
+  Future<Response> post(String url, {dynamic body, dynamic headers}) async {
     try {
+      if (headers != null) {
+        _dio.options = BaseOptions(headers: headers);
+      }
       final Response response = await _dio.post(url, data: body);
       return response;
     } catch (e) {

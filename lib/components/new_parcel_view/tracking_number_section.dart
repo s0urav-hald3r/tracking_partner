@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/controllers/home_controller.dart';
 import 'package:tracking_partner/views/scan_view.dart';
 
 class TrackingNumberSection extends StatelessWidget {
@@ -29,6 +30,13 @@ class TrackingNumberSection extends StatelessWidget {
           height: 45.h,
           margin: EdgeInsets.symmetric(horizontal: 20.w),
           child: CupertinoTextField(
+            controller: HomeController.instance.tNumberController,
+            textCapitalization: TextCapitalization.sentences,
+            keyboardType: TextInputType.name,
+            textInputAction: TextInputAction.search,
+            onSubmitted: (value) {
+              HomeController.instance.detectPartner();
+            },
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: const Color(0xFFEEEEEE)),

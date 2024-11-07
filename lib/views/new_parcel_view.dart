@@ -29,32 +29,37 @@ class NewParcelView extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const PackageIconSection(),
-          const TrackingNumberSection(),
-          const CarrierSection(),
-          const ParcelNameSection(),
-          const Spacer(),
-          Container(
-            height: 45.h,
-            width: double.infinity,
-            margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-            child: ElevatedButton(
-              onPressed: () {
-                // Define action here
-              },
-              child: Text(
-                'Add Parcel',
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w700,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Column(
+              children: [
+                PackageIconSection(),
+                TrackingNumberSection(),
+                CarrierSection(),
+                ParcelNameSection(),
+              ],
+            ),
+            Container(
+              height: 45.h,
+              width: double.infinity,
+              margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+              child: ElevatedButton(
+                onPressed: () {
+                  // Define action here
+                },
+                child: Text(
+                  'Add Parcel',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

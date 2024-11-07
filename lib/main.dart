@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/dashboard_controller.dart';
+import 'package:tracking_partner/controllers/home_controller.dart';
 import 'package:tracking_partner/controllers/onboarding_controller.dart';
 import 'package:tracking_partner/controllers/settings_controller.dart';
 import 'package:tracking_partner/utlis/local_storage.dart';
@@ -14,6 +15,7 @@ Future<void> main() async {
   // Dependency injection
   Get.lazyPut(() => OnboardingController());
   Get.lazyPut(() => DashboardController());
+  Get.lazyPut(() => HomeController());
   Get.lazyPut(() => SettingsController());
 
   // Initialize storage
