@@ -45,6 +45,7 @@ dependencies:
   infinite_carousel: ^1.1.1
   dotted_line: ^3.2.3
   get_storage: ^2.1.1
+  dio: ^5.7.0
 
 dev_dependencies:
   flutter_test:
