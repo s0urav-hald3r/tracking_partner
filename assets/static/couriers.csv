@@ -1,0 +1,1334 @@
+Courier Name	,Carrier Code	,Country
+FedEx	,fedex	,US	
+DHL	,dhl	,DE	
+UPS	,ups	,US	
+TNT	,tnt	,US	
+China Post	,china-post	,CN	
+China EMS	,china-ems	,CN	
+Hong Kong Post	,hong-kong-post	,HK	
+Singapore Post	,singapore-post	,SG	
+Swiss Post	,swiss-post	,CH	
+USPS	,usps	,US	
+Royal Mail	,royal-mail	,GB	
+PostNL International	,postnl-parcels	,NL	
+Canada Post	,canada-post	,CA	
+Australia Post	,australia-post	,AU	
+New Zealand Post	,new-zealand-post	,NZ	
+Parcelforce	,parcel-force	,GB	
+Bpost	,belgium-post	,BE	
+Brazil Correios	,brazil-correios	,BR	
+Russian Post	,russian-post	,RU	
+PostNord	,sweden-posten	,SE	
+La Poste	,laposte	,FR	
+Poste Italiane	,poste-italiane	,IT	
+Aland Post	,aland-post	,AX	
+Afghan Post	,afghan-post	,AF	
+Albania Post	,posta-shqiptare	,AL	
+Andorra Post	,andorra-post	,AD	
+Antilles Post	,antilles-post	,AN	
+Argentina Post	,correo-argentino	,AR	
+Armenia Post	,armenia-post	,AM	
+Aruba Post	,aruba-post	,AW	
+Austrian Post	,austria-post	,AT	
+Azerbaijan Post	,azerbaijan-post	,AZ	
+Bahrain Post	,bahrain-post	,BH	
+Bangladesh EMS	,bangladesh-ems	,BD	
+Barbados Post	,barbados-post	,BB	
+Belarus Post	,belpochta	,BY	
+Belize Post	,belize-post	,BZ	
+Benin Post	,benin-post	,BJ	
+Bermuda Post	,bermuda-post	,BM	
+Bhutan Post	,bhutan-post	,BT	
+Bolivia Post	,correos-bolivia	,BO	
+Bosnia And Herzegovina Post	,bosnia-and-herzegovina-post	,BA	
+Botswana Post	,botswana-post	,BW	
+Brunei Post	,brunei-post	,BN	
+Bulgaria Post	,bulgaria-post	,BG	
+Burkina Faso Post	,sonapost	,BF	
+Burundi Post	,burundi-post	,BI	
+Cambodia Post	,cambodia-post	,KH	
+Cameroon Post	,campost	,CM	
+Correios Cabo Verde	,correios-cabo-verde	,CV	
+Colombia Post	,colombia-post	,CO	
+Croatia Post	,hrvatska-posta	,HR	
+Cuba Post	,cuba-post	,CU	
+Cyprus Post	,cyprus-post	,CY	
+Czech Post	,czech-post	,CZ	
+Denmark post	,denmark-post	,DK	
+Dominican Post	,inposdom	,DO	
+Ecuador Post	,correos-del-ecuador	,EC	
+El Salvador Post	,el-salvador-post	,SV	
+Eritrea Post	,eritrea-post	,ER	
+Estonia Post	,omniva	,EE	
+Ethiopia Post	,ethiopia-post	,ET	
+Faroe Islands Post	,faroe-islands-post	,FO	
+Fiji Post	,fiji-post	,FJ	
+Finland Post - Posti	,finland-posti	,FI	
+Colissimo	,colissimo	,FR	
+Chronopost	,chronopost	,FR	
+Georgia Post	,georgian-post	,GE	
+Deutsche Post	,deutsche-post	,DE	
+Ghana Post	,ghana-post	,GH	
+Gibraltar  Post	,gibraltar-post	,GI	
+ELTA Hellenic Post	,greece-post	,GR	
+Greenland Post	,tele-post	,GL	
+Guatemala Post	,elcorreo	,GT	
+Guernsey Post	,guernsey-post	,GG	
+Magyar Posta	,magyar-posta	,HU	
+Iceland Post	,iceland-post	,IS	
+India Post	,india-post	,IN	
+Indonesia Post	,indonesia-post	,ID	
+Iran Post	,iran-post	,IR	
+An Post	,an-post	,IE	
+Israel Post	,israel-post	,IL	
+Ivory Coast EMS	,ivory-coast-ems	,CI	
+Jamaica Post	,jamaica-post	,JM	
+Japan Post	,japan-post	,JP	
+Jordan Post	,jordan-post	,JO	
+Kazakhstan Post	,kazpost	,KZ	
+Kenya Post	,kenya-post	,KE	
+Korea Post	,korea-post	,KR	
+Kuwait Post	,kuwait-post	,KW	
+Kyrgyzstan Post	,kyrgyzpost	,KG	
+Laos Post	,laos-post	,LA	
+Latvia Post	,latvijas-pasts	,LV	
+Lebanon Post	,liban-post	,LB	
+Lesotho Post	,lesotho-post	,LS	
+Liechtenstein Post	,liechtenstein-post	,LI	
+Lithuania Post	,lietuvos-pastas	,LT	
+Luxembourg Post	,luxembourg-post	,LU	
+Macao Post	,macao-post	,MO	
+Macedonia Post	,macedonia-post	,MK	
+Malaysia Post	,malaysia-post	,MY	
+Maldives Post	,maldives-post	,MV	
+Malta Post	,malta-post	,MT	
+Mauritius Post	,mauritius-post	,MU	
+Mexico Post	,correos-mexico	,MX	
+Moldova Post	,moldova-post	,MD	
+Monaco Post	,la-poste-monaco	,MC	
+Monaco EMS	,monaco-ems	,MC	
+Mongol Post	,mongol-post	,MN	
+Montenegro Post	,posta-crne-gore	,ME	
+Maroc Poste	,poste-maroc	,MA	
+Namibia Post	,namibia-post	,NA	
+Netherlands Post	,netherlands-post	,NL	
+New Caledonia Post	,new-caledonia-post	,NC	
+Nicaragua Post	,nicaragua-post	,NI	
+Nigeria Post	,nigeria-post	,NG	
+Posten Norge	,posten-norge	,NO	
+Oman Post	,oman-post	,OM	
+Overseas Territory FR EMS	,overseas-territory-fr-ems	,FR	
+Overseas Territory US Post	,overseas-territory-us-post	,US	
+Pakistan Post	,pakistan-post	,PK	
+Panama Post	,correos-panama	,PA	
+Papua New Guinea Post	,postpng	,PG	
+Paraguay Post	,correo-paraguayo	,PY	
+Serpost	,serpost	,PE	
+PhilPost	,phlpost	,PH	
+Poland Post	,poczta-polska	,PL	
+Portugal CTT	,ctt	,PT	
+Qatar Post	,qatar-post	,QA	
+Romania Post	,posta-romana	,RO	
+Rwanda Post	,iposita-rwanda	,RW	
+Saint Lucia Post	,saint-lucia-post	,LC	
+Saint Vincent And The Grenadines	,svgpost	,VC	
+Samoa Post	,samoa-post	,WS	
+San Marino Post	,san-marino-post	,SM	
+Saudi Post	,saudi-post	,SA	
+Senegal Post	,senegal-post	,SN	
+Serbia Post	,serbia-post	,RS	
+Seychelles Post	,seychelles-post	,SC	
+Slovakia Post	,slovakia-post	,SK	
+Slovenia Post	,slovenia-post	,SI	
+Solomon Post	,solomon-post	,SB	
+South African Post Office	,south-africa-post	,ZA	
+Correos	,correos-spain	,ES	
+Sri Lanka Post	,sri-lanka-post	,LK	
+Sudan Post	,sudan-post	,SD	
+Syrian Post	,syrian-post	,SY	
+Chunghwa POST	,taiwan-post	,TW	
+Tanzania Post	,tanzania-post	,TZ	
+Thailand Post	,thailand-post	,TH	
+Togo Post	,togo-post	,TG	
+Tonga Post	,tonga-post	,TO	
+Tunisia Post	,tunisia-post	,TN	
+Turkish Post (PTT)	,turkey-post	,TR	
+Turkmenistan Post	,turkmenistan-post	,TM	
+Tuvalu Post	,tuvalu-post	,TV	
+Uganda Post	,uganda-post	,UG	
+Ukraine Post	,ukraine-post	,UA	
+Ukraine EMS	,ukraine-ems	,UA	
+Emirates Post	,emirates-post	,AE	
+Uruguay Post	,uruguay-post	,UY	
+Uzbekistan Post	,uzbekistan-post	,UZ	
+Uzbekistan EMS	,uzbekistan-ems	,UZ	
+Vanuatu Post	,vanuatu-post	,VU	
+Vietnam Post	,vietnam-post	,VN	
+Yemen Post	,yemen-post	,YE	
+Zambia Post	,zambia-post	,ZM	
+Zimbabwe Post	,zimbabwe-post	,ZW	
+Yanwen	,yanwen	,CN	
+GLS	,gls	,	
+BRT Bartolini	,bartolini	,IT	
+DPD	,dpd	,	
+SF International	,sfb2c	,CN	
+Aramex	,aramex	,	
+TOLL	,toll	,	
+DHL Germany	,dhl-germany	,DE	
+4PX	,4px	,CN	
+Flyt Express	,flytexpress	,CN	
+YunExpress	,yunexpress	,CN	
+One World Express	,oneworldexpress	,CN	
+DHL eCommerce NL	,dhlparcel-nl	,NL	
+DHL Poland Domestic	,dhl-poland	,PL	
+DHL Spain Domestic	,dhl-es	,ES	
+TNT Italy	,tnt-it	,IT	
+TNT France	,tnt-fr	,FR	
+DPD UK	,dpd-uk	,UK	
+TNT UK	,tnt-uk	,UK	
+GLS Italy	,gls-italy	,IT	
+Team Global Express	,toll-ipec	,AU	
+Asendia USA	,asendia-usa	,US	
+Asendia UK	,asendia-uk	,UK	
+Yodel	,yodel	,UK	
+Asendia Germany	,asendia-de	,DE	
+Kerry Logistics	,kerry-logistics	,	
+XRU	,xru	,CN	
+DPEX	,dpex	,SG	
+Ruston	,ruston	,CN	
+UPU	,upu	,	
+Bluedart	,bluedart	,IN	
+DTDC	,dtdc	,IN	
+GoJavas	,gojavas	,IN	
+First Flight	,first-flight	,IN	
+Gati-KWE	,gati-kwe	,IN	
+ROSAN EXPRESS	,rosan	,CN	
+WSGD Logistics	,wsgd-logistics	,	
+WishPost	,wishpost	,CN	
+STO Express	,sto	,cn	
+YTO Express	,yto	,cn	
+ZTO Express	,zto	,CN	
+DHL eCommerce	,dhlglobalmail	,DE	
+DSV	,dsv	,	
+Echo	,echo	,US	
+DPD Ireland	,dpd-ireland	,IE	
+OnTrac	,ontrac	,US	
+Purolator	,purolator	,US	
+Fastway New Zealand	,fastway-nz	,NZ	
+Aramex Australia(Fastway Australia)	,fastway-au	,AU	
+Fastway Ireland	,fastway-ie	,IE	
+I-parcel	,i-parcel	,US	
+LaserShip	,lasership	,US	
+SkyNet Worldwide Express	,skynetworldwide	,	
+PFC Express	,pfcexpress	,cn	
+Nexive	,nexive	,IT	
+RL Carriers	,rl-carriers	,US	
+Nanjing Woyuan	,nanjingwoyuan	,CN	
+LWE	,lwehk	,CN	
+Hua Han Logistics	,hhexp	,CN	
+Envialia	,envialia	,ES	
+Canpar Courier	,canpar	,CA	
+Delcart	,delcart-in	,IN	
+City-Link Express	,citylinkexpress	,MY	
+2GO	,2go	,PH	
+Xend Express	,xend	,PH	
+AIR21	,air21	,PH	
+Airspeed International Corporation	,airspeed	,PH	
+RAF Philippines	,raf	,PH	
+Wahana	,wahana	,ID	
+Giao Hàng Nhanh	,ghn	,VN	
+Viettel Post	,viettelpost	,VN	
+Dotzot	,dotzot	,IN	
+Kangaroo Worldwide Express	,kangaroo-my	,MY	
+Maxcellents Pte Ltd	,maxcellents	,SG	
+Nationwide Express	,nationwide-my	,MY	
+RPX Online	,rpxonline	,	
+Nhans Solutions	,nhans-solutions	,SG	
+Jet-Ship Worldwide	,jet-ship	,SG	
+Ecargo	,ecargo-asia	,KR	
+Delhivery	,delhivery	,IN	
+Ecom Express	,ecom-express	,IN	
+GDEX	,gdex	,MY	
+SkyNet Malaysia	,skynet	,MY	
+SFC Service	,sfcservice	,	
+EC-Firstclass	,ec-firstclass	,	
+WeDo Logistics	,wedo	,	
+JCEX	,jcex	,CN	
+CNE Express	,cnexps	,CN	
+Equick	,equick-cn	,CN	
+EMPS Express	,empsexpress	,	
+DPE Express	,dpe-express	,CN	
+Bonds Couriers	,bondscouriers	,AU	
+CourierPost	,courierpost	,NZ	
+ACOMMERCE	,acommerce	,	
+139 ECONOMIC Package	,139express	,CN	
+UBI	,ubi-logistics	,CN	
+MRW	,mrw-spain	,ES	
+Packlink	,packlink	,ES	
+Colis Prive	,colis-prive	,FR	
+FedEx Poland Domestic	,opek	,PL	
+SGT Corriere Espresso	,sgt-it	,IT	
+KGM Hub	,kgmhub	,	
+Qxpress	,qxpress	,SG	
+SRE Korea	,srekorea	,KR	
+YAMATO TRANSPORT	,taqbin-jp	,JP	
+Sagawa	,sagawa	,JP	
+ABX Express	,abxexpress-my	,MY	
+Mypostonline	,mypostonline	,MY	
+Jam Express	,jam-express	,PH	
+Jayon Express (JEX)	,jayonexpress	,SG	
+RPX Indonesia	,rpx	,ID	
+RaidereX	,raiderex	,	
+RZY Express	,rzyexpress	,SG	
+Airpak Express	,airpak-express	,MY	
+LBC Express	,lbcexpress	,	
+Pandu Logistics	,pandulogistics	,ID	
+Collect+	,collectplus	,UK	
+Skynet Worldwide Express UK	,skynetworldwide-uk	,UK	
+Hermes	,hermes	,UK	
+Nightline	,nightline	,IE	
+APC Postal Logistics	,apc	,US	
+Newgistics	,newgistics	,	
+Old Dominion Freight Line	,old-dominion	,US	
+Estes	,estes	,CA	
+Greyhound	,greyhound	,CA	
+Globegistics Inc.	,globegistics	,US	
+TGX	,tgx	,	
+ZJS International	,zjs-express	,CN	
+Hermes Germany	,hermes-de	,DE	
+Seur	,international-seur	,ES	
+P2P TrakPak	,trakpak	,	
+Matkahuolto	,matkahuolto	,FI	
+ACS Courier	,acscourier	,GR	
+DPD Poland	,dpd-poland	,PL	
+Geniki Taxydromiki	,taxydromiki	,GR	
+CBL Logistics	,cbl-logistica	,ES	
+Redur Spain	,redur-es	,ES	
+Siodemka	,siodemka	,PL	
+DPD France (formerly exapaq)	,exapaq	,FR	
+Cainiao	,cainiao	,CN	
+ETS Express	,ets-express	,	
+Ali Business Logistics	,al8856	,CN	
+Anjun Logistics	,anjun	,CN	
+Quantium	,quantium	,HK	
+XQ Express	,xqwl	,CN	
+Alpha Fast	,alpha-fast	,TH	
+Omni Parcel	,omniparcel	,	
+CDEK Express	,cdek	,	
+Trackon Courier	,trackon	,IN	
+Yunda Express	,yunda	,CN	
+PostNL	,postnl-3s	,NL	
+ADSOne	,adsone	,AU	
+Landmark Global	,landmark-global	,BE	
+The Courier Guy	,thecourierguy	,ZA	
+SMSA Express	,smsa-express	,SA	
+SF Express	,sf-express	,CN	
+Cosmetics Now	,costmeticsnow	,	
+InPost	,inpost-paczkomaty	,PL	
+StarTrack	,star-track	,AU	
+QFKD Express	,qfkd	,CN	
+JD Express	,jd	,CN	
+TTKD Express	,ttkd	,CN	
+DEPPON	,deppon	,CN	
+Cacesa Postal	,cacesapostal	,	
+Chukou1 Logistics	,chukou1	,CN	
+Arrow XL	,arrowxl	,UK	
+XDP Express	,xdp-uk	,UK	
+IMEX Global Solutions	,imexglobalsolutions	,US	
+Easy Mail	,easy-mail	,GR	
+IDEX	,idexpress	,CN	
+RR Donnelley	,rrdonnelley	,	
+Con-way Freight	,con-way	,US	
+Ninja Van Singapore	,ninjavan	,SG	
+Speedex Courier	,speedexcourier	,	
+Expeditors	,expeditors	,US	
+SPSR	,spsr	,RU	
+Chronopost Portugal(DPD)	,chronopost-portugal	,PT	
+DWZ Express	,dwz	,CN	
+XpressBees	,xpressbees	,IN	
+Courier IT	,courier-it	,ZA	
+Specialised Freight	,specialised-freight	,ZA	
+UPS Mail Innovations	,ups-mi	,US	
+DPE South Africa	,dpe-south-africa	,ZA	
+Dawn Wing	,dawn-wing	,ZA	
+Fastrak Services	,fastrak-services	,TH	
+Nova Poshta	,nova-poshta	,UA	
+UC Express	,uc-express	,	
+Takesend Logistics	,takesend	,CN	
+DHL Netherlands	,dhl-nl	,NL	
+Roadbull Logistics	,roadbull	,SG	
+DHL Benelux	,dhl-benelux	,BE	
+Tk Kit	,tk-kit	,RU	
+ABF Freight	,abf	,US	
+Couriers Please express	,couriers-please	,AU	
+Cess	,cess	,cn	
+Best Express	,bestex	,CN	
+Gofly	,gofly	,	
+SINOAIR	,sinoair	,cn	
+Italy SDA	,italy-sda	,IT	
+T Cat	,t-cat	,cn	
+Fastgo	,fastgo	,NZ	
+PCA	,pca	,AU	
+FTD Express	,ftd	,NZ	
+Shipgce Express	,shipgce	,	
+Wise Express	,wise-express	,cn	
+Cnpex	,cnpex	,cn	
+1hcang	,1hcang	,CN	
+Sunyou	,sunyou	,CN	
+DHL Global Mail Asia	,dhlecommerce-asia	,DE	
+DHL Active Tracing	,dhl-active	,	
+TNT Reference	,tnt-reference	,	
+J-NET Express	,j-net	,cn	
+Jiayi Express	,jiayi56	,cn	
+Deltec Courier	,deltec-courier	,UK	
+Miuson Express	,miuson-international	,cn	
+Espeedpost	,espeedpost	,cn	
+Asendia HK	,asendia-hk	,CN	
+GATI Courier	,gaticn	,cn	
+DPEX China	,szdpex	,cn	
+TNT Click	,tnt-click	,IT	
+Rufengda	,rufengda	,cn	
+MailAmericas	,mailamericas	,US	
+Far International Logistics	,far800	,cn	
+Winit	,winit	,cn	
+360zebra	,360zebra	,cn	
+Auexpress	,auexpress	,cn	
+Sure56	,sure56	,cn	
+KUAYUE EXPRESS	,kye	,cn	
+Fetchr	,fetchr	,US	
+Flyway Express	,flywayex	,cn	
+China Russia56	,china-russia56	,CN	
+EFSPost	,efspost	,cn	
+Eyou800	,eyoupost	,CN	
+FD Express	,fd-express	,cn	
+ESHUN International Logistics	,zes-express	,	
+utec	,utec	,	
+XDEXPRESS	,xdexpress	,AU	
+venucia	,qichen	,CN	
+13ten	,13-ten	,	
+KWT Express	,kwt56	,	
+Wiseloads	,wiseloads	,IE	
+wnDirect	,wndirect	,UK	
+Eurodis	,eurodis	,	
+Matdespatch	,matdespatch	,MY	
+TNT Australia	,tnt-au	,AU	
+yakit	,yakit	,US	
+TAQBIN Hong Kong	,taqbin-hk	,HK	
+UBon Express	,ubonex	,	
+EWS Profit Fields	,8dt	,CN	
+2U Express	,2uex	,	
+Ane Express	,ane66	,	
+Ausworld Express	,aus	,	
+EWE Global Express	,ewe	,AU	
+Huida Express	,huidaex	,	
+allekurier	,allekurier	,PL	
+Transrush	,transrush	,	
+Suteng Logistics	,ste56	,	
+QEXPRESS	,qexpress	,NZ	
+Chinz Logistics	,chinz56	,NZ	
+DPD HK	,dpd-hk	,CN	
+Zhongtie Logistics	,ztky	,	
+Dada logistic	,idada56	,	
+Jersey Post	,jersey-post	,UK	
+Ninja Van Malaysia	,ninjavan-my	,MY	
+Ninja Van Indonesia	,ninjaxpress	,	
+Ninja Van Philippines	,ninjavan-ph	,PH	
+Ninja Van Thailand	,ninjavan-th	,TH	
+Sai Cheng Logistics	,saicheng	,	
+8Europe	,8europe	,	
+A PLUS EXPRESS	,aplus100	,	
+SYD Express	,suyd56	,	
+OCS Express	,ocschina	,CN	
+Naqel	,naqel	,SA	
+BSI express	,bsi	,cn	
+Jayeek	,jayeek	,	
+Blue Sky Express	,blueskyexpress	,AU	
+Pos Laju	,poslaju	,MY	
+TAQBIN Malaysia	,taqbin-my	,MY	
+Ekart Logistics	,ekart	,IN	
+Shree Tirupati Courier	,shree-tirupati	,IN	
+Safexpress	,safexpress	,IN	
+IML Logistics	,imlb2c	,	
+HiveWMS	,hivewms	,	
+Usky	,uskyexpress	,	
+Ark express	,arkexpress	,AU	
+Winlink logistics	,winlink	,CN	
+xpresspost	,xpresspost	,CA	
+ePacket	,epacket	,CN	
+DTDC Plus	,dtdc-plus	,IN	
+DHL Hong Kong	,dhl-hong-kong	,	
+UPS Freight	,ups-freight	,US	
+UPS Ground	,ups-ground	,US	
+SGT Express	,sgtwl	,CN	
+COE	,coe	,	
+LHT Express	,lhtex	,CN	
+Wanb Express	,wanbexpress	,CN	
+SprintPack	,sprintpack	,	
+Kawa	,kawa	,cn	
+IEPost	,iepost	,CN	
+Alljoy	,alljoy	,CN	
+SX-Express	,sxexpress	,AU	
+DEX-I	,dex-i	,cn	
+WEL	,logistics	,	
+Un-line	,un-line	,	
+BAB international	,bab-ru	,CN	
+CNILINK	,cnilink	,	
+HKD	,hkdexpress	,AU	
+Showl	,showl	,	
+Sendle	,sendle	,AU	
+Bombino Express	,bombino-express	,IN	
+Whistl	,whistl	,UK	
+DX Delivery	,dxdelivery	,UK	
+Hui Logistics	,huilogistics	,CN	
+SuperOZ Logistics	,superoz	,AU	
+Leopards Express	,leopardschina	,CN	
+Overseas Logistics	,overseas-logistics	,IN	
+Better Express	,cbtsd	,	
+Linex	,linexsolutions	,	
+Airwings Courier Express India	,airwings-india	,IN	
+The Professional Couriers	,professional-couriers	,IN	
+ASM (GLS Spain)	,asmred	,ES	
+Mondial Relay	,mondialrelay	,FR	
+LJS	,bt-exp	,	
+AsiaFly	,asiafly	,CN	
+Flying Leopards Express	,njfeibao	,CN	
+First Flight Couriers	,firstflightme	,AE	
+J&T Express	,jet	,ID	
+360lion Express	,360lion	,CN	
+HCT Express	,hct	,CN	
+LDXpress	,ldxpress	,CN	
+CJ Logistics	,doortodoor	,KR	
+K1 Express	,kuajingyihao	,CN	
+7-ELEVEN	,qi-eleven	,JP	
+ORANGE CONNEX	,orangeconnex	,CN	
+JS EXPRESS	,js-exp	,CN	
+Gao Post	,gaopost	,CN	
+DB Schenker	,dbschenker	,DE	
+UK Mail	,ukmail	,UK	
+Palletways	,palletways	,UK	
+Eshipping Gateway	,yht	,CN	
+MyIB	,myib	,CN	
+Fulfillmen	,fulfillmen	,	
+CEVA Logistics	,ceva-logistics	,US	
+UBX Express	,ubx-uk	,UK	
+Shree Mahabali Express	,shree-mahabali-express	,IN	
+YDH	,ydhex	,	
+QuicKway	,quickway	,	
+YL express	,yunlu	,CN	
+sfwl	,sfwl	,	
+Kerry Express VN	,kerryexpress	,VN	
+GEL Express	,gel-express	,DE	
+Buffalo	,buffaloex	,	
+LD Logistics	,ldlog	,CN	
+GmbH	,myaustrianpost	,DE	
+Cosex	,cosex	,	
+Hong Tai	,ht56	,	
+E-lian	,elianpost	,	
+Bao Tongda Freight Forwarding	,btd56	,	
+Shree Maruti Courier	,shreemaruticourier	,IN	
+BQC	,bqc	,	
+Hnfywl	,hnfywl	,	
+Kerry Tec	,kerry-tec	,	
+BEL	,8256ru	,	
+CXC	,cxc	,	
+Airfex	,airfex	,CN	
+King Kong Express	,kke	,CN	
+Best Express(logistic)	,800best	,CN	
+YJI	,yji	,	
+SpeedPAK	,speedpak	,CN	
+Zajil	,zajil	,SA	
+LEX	,lgs	,	
+Dekun	,dekun	,	
+YMDD	,yimidida	,	
+ECPOST	,ecpost	,CN	
+CRE	,cre	,CN	
+Famiport	,famiport	,	
+Taiwan Pelican Express	,e-can	,	
+Meest Express	,meest	,	
+Boxc Logistics	,boxc	,	
+Jiayou	,ltian	,CN	
+SJTSZ Express	,sjtsz	,CN	
+ComOne Express	,com1express	,	
+MC Express	,md-express	,	
+Grand Slam Express	,grandslamexpress	,IN	
+LiBang International Logistics	,lbexps	,	
+eTotal	,etotal	,	
+hound	,hound	,	
+UEQ	,ueq	,CN	
+Sum Xpress	,sumxpress	,	
+eParcel Korea	,eparcel-kr	,KR	
+SUNING	,suning	,	
+DPD Germany	,dpd-de	,DE	
+Hanxuan international express	,hxgj56	,CN	
+SHUNBANG EXPRESS	,kjy	,CN	
+Euasia Express	,euasia	,	
+1DL Express	,1dlexpress	,CN	
+UVAN Express	,uvan	,CN	
+Nippon Express	,nippon	,JP	
+Ninja Van Vietnam	,ninjavan-vn	,VN	
+Sagawa Global	,sagawa-global	,JP	
+Szendex	,szendex	,ES	
+Spoton Logistics	,spoton	,IN	
+Dachser	,dachser	,DE	
+TopYou	,topyou	,CN	
+SAP Express	,sap-express	,IN	
+WSE Logistics	,gdwse	,CN	
+KINGRUNS	,kingruns	,TR	
+YingNuo Supply Chain	,szyn	,CN	
+Redpack Mexico	,redpack-mexico	,MX	
+Beebird Logistics	,beebird	,AU	
+Royal Shipments	,royal-shipments	,PL	
+Amazon	,amazon	,US	
+Evri	,hermes-uk	,UK	
+Geodis	,geodis	,FR	
+CJ Packet	,cj-dropshipping	,CN	
+17Feia Express	,17feia	,CN	
+DHL Global Forwarding	,dhl-global-logistics	,US	
+Aprche	,aprche	,	
+Yong Man Yi	,ymy	,	
+Pony Express	,pony-express	,RU	
+Hi Life	,hi-life	,CN	
+Ltexp	,ltexp	,CN	
+Ledii	,ledii	,CN	
+Top Ideal Express	,zhuozhi	,CN	
+OCS Worldwide	,ocs-worldwide	,UK	
+Estafeta USA	,estafetausa	,US	
+Art Logexpress	,artlogexpress	,CN	
+Trending Times	,deltafille	,US	
+DD Express	,ddexpress	,MY	
+DPD Romania	,dpd-ro	,RO	
+RRS Logistics	,rrs	,CN	
+Saia LTL Freight	,saia-freight	,US	
+Antron Express	,168express	,CN	
+Correos Express	,correosexpress	,ES	
+FAST BEE	,fbb	,US	
+ELTA Courier	,elta-courier-gr	,GR	
+TIPSA	,tip-sa	,ES	
+AnserX	,anserx	,CN	
+CHOICE Logistics	,choice	,CN	
+JD Logistics	,jd-logistics	,CN	
+Line Clear Express	,line-clear	,MY	
+Asendia	,asendia	,	
+Espost	,espost	,ES	
+Echindia	,global-routers	,CN	
+iMile	,imile	,AE	
+CSD Express	,csd	,CN	
+COSCO eGlobal	,cosco	,CN	
+Spee-Dee Delivery	,speedee	,US	
+LP Express	,lpexpress	,LT	
+Venipak	,venipak	,LT	
+Smartcat	,smartcat	,CN	
+Pitney Bowes	,pitneybowes	,US	
+DPD Belgium	,dpd-be	,BE	
+V-Xpress	,v-xpress	,IN	
+DHL Parcel UK	,dhl-uk	,UK	
+TONGDA Global	,tarrive	,CN	
+Lexship	,lexship	,IN	
+OrangeDS	,orangeds	,US	
+ChangJiang Express	,changjiangexpress	,CN	
+CSE	,cse	,RU	
+FirstMile	,firstmile	,US	
+Dellin	,dellin	,RU	
+Bluecare Express	,bluecare	,UK	
+intelcom	,intelcom	,CA	
+J&T Express Thailand	,jt-express-th	,TH	
+ESNAD Express	,esnad	,KE	
+XingYunYi	,xingyunyi	,CN	
+TNT LT	,tnt-lt	,	
+GLS Poland	,gls-pl	,PL	
+PostaPlus	,postaplus	,KW	
+1SD	,1shida	,CN	
+VNCPost	,vncpost	,vn	
+ZTO International	,zto-international	,CN	
+Spring GDS	,spring-gds	,ES	
+TCS Express	,tcs-express	,	
+VOVA Logistics	,vova-logistics	,HK	
+J&T Express Vietnam	,jt-express	,vn	
+Global Leader	,global-leader	,CN	
+CTT Express	,ctt-express	,PT	
+We World Express	,weworld-express	,CN	
+Shopee Express Vietnam	,spx-vn	,VN	
+Shopee Express Malaysia	,spx-my	,MY	
+JINDOUYUN Logistics	,jdy	,CN	
+ZHONGSU International	,zhongsu	,CN	
+UK Asendia	,uktracking-asendia	,UK	
+Asendia UK Premium	,asendia-wmp	,UK	
+Fastway South Africa	,fastway-za	,ZA	
+Weaship	,weaship	,CN	
+GTI	,gti	,CN	
+Parcel Freight Logistics	,pflogistics	,AU	
+Exelot	,exelot	,IL	
+J&T Express China	,jtexpress	,CN	
+Sailpost	,sailpost	,IT	
+Asyad Express	,asyad	,IL	
+mz56	,mz56	,	
+Janio Asia	,janio	,SG	
+Kerry Express TH	,kerryexpress-th	,US	
+Border Express	,border-express	,AU	
+TT Sucha	,twth	,CN	
+Kerry eCommerce	,kerry-ecommerce	,	
+NZCouriers	,nzcouriers	,US	
+Hermes BorderGuru	,hermes-borderguru	,US	
+Shipa	,shipa	,UAE	
+Post Haste	,posthaste	,IT	
+Flash Express	,flashexpress	,TH	
+SCG Express	,scg-express	,TH	
+GLS Spain	,gls-es	,ES	
+FBA UK Swiship	,swiship-uk	,UK	
+FBA USA Swiship	,swiship-usa	,US	
+CGS Express	,cgs-express	,CN	
+Comet Hellas	,cometcourier	,GR	
+Day & Ross	,dayross	,CA	
+TForce Logistics	,tforce	,CA	
+J&T Express Philippines	,jtexpress-ph	,PH	
+CND Express	,cndexpress	,CN	
+JoeyCo	,joeyco	,CA	
+Packeta	,packeta	,	
+Paquetexpress	,paquet	,MX	
+GOGO Xpress	,gogo-xpress	,PH	
+etower	,etower	,	
+YiYuan	,yiyuan	,CN	
+BEST Express (Malaysia)	,best-my	,MY	
+Cubyn	,cubyn	,FR	
+anxl	,anxl	,	
+Hlihang Express	,hlihang-express	,CN	
+Zeleris	,zeleris	,	
+DAO365	,dao365	,	
+Pushpak Courier	,pushpak-courier	,IN	
+Shree Nandan Courier	,shree-nandan	,IN	
+Madhur Couriers	,madhur-couriers	,IN	
+Bombax	,bombax	,IN	
+Shadowfax	,shadowfax	,IN	
+EMS	,ems-post	,	
+Nacex	,nacex	,ES	
+Star Global	,starglobal	,CN	
+Chit Chats	,chitchats	,CA	
+TCI Express	,tci	,IN	
+DPD Russia	,dpd-ru	,RU	
+GLS US	,gls-us	,US	
+FUJIE Express	,fujexp	,CN	
+Express One	,expressone	,	
+CARIBOU	,caribou	,	
+SKY Postal	,sky-postal	,	
+Delnext	,delnext	,	
+Mainfreight	,mainfreight	,	
+eFMX	,fmx	,	
+Huanshid	,huanshid	,	
+SEINO(西濃運輸)	,seino	,JP	
+PPL CZ	,ppl-cz	,CZ	
+J&T Express Singapore	,jt-express-sg	,SG	
+Tracknator	,tracknator	,	
+ECMS Express	,ecms	,CN	
+CDEK Turkey	,cdek-tr	,TR	
+collivery	,collivery	,	
+99minutos	,99minutos	,	
+GLS CZ	,gls-cz	,	
+Shopee Express Philipines	,spx-ph	,PH	
+Atlantic International Express	,atlantic	,IN	
+Maxway Logistics	,maxway	,CN	
+Comet Hellas	,comethellas	,GR	
+J&T Express Malaysia	,jtexpress-my	,MY	
+XYL 816Kapro	,816kf	,	
+Post One	,postone	,BG	
+Bee Express	,bee	,TH	
+FBA ES Swiship	,swiship-es	,	
+YuTeng Worldwide	,yuteng	,CN	
+mantianxing	,mantianxing	,	
+Loomis Express	,loomis	,	
+SPX ID	,spx-id	,ID	
+JUXI EXPRESS	,juxiex	,CN	
+ShipEntegra	,shipentegra	,	
+cititrans	,cititrans	,CN	
+Amazon India	,amazon-in	,IN	
+Amazon UK	,amazon-uk	,UK	
+DPD Greece	,dpd-gr	,GR	
+Averitt Express	,averittexpress	,	
+shippit	,shippit	,	
+urvaam	,urvaam	,urvaam	
+LM Parcel	,lmparcel	,	
+Pago Logistics	,szpago	,	
+Bona	,bnexp	,CN	
+Sunnyway	,isunnyway	,CN	
+Sky Express	,skyex	,	
+Smart Delivery	,smart-delivery	,KZ	
+madrooex	,madrooex	,CN	
+Tianzheng International Freight	,tzgjwl	,CN	
+STONE3PL	,stone3pl	,	
+3JMS Logistics	,3jmslogistics	,	
+ECOSCOOTING	,ecoscooting	,	
+Amsma Group	,amsma	,	
+UAB Nėgė	,nege-it	,	
+Early Bird	,earlybird	,SW	
+Dicom	,dicom	,CA	
+Geis CZ	,geis-cz	,CZ	
+FBA IT Swiship	,swiship-it	,	
+fietskoeriers	,fietskoeriers	,	
+Flow Commerce	,flow-io	,	
+auodexpress	,auodexpress	,	
+maxeedexpress	,maxeedexpress	,	
+ees-logistics	,ees-logistics	,	
+Allied Express	,alliedexpress	,	
+JIUZHOU Logistics	,szjiuz	,	
+zjcy56	,zjcy56	,	
+baoxianda	,baoxianda	,	
+The Lorry	,thelorry	,	
+Cargo International	,cargointl-de	,	
+Best Express (TH)	,best-th	,	
+decnlh	,decnlh	,	
+dfglobalex	,dfglobalex	,	
+Southeastern Freightlines	,se-freightlines	,	
+Happy Post	,happy-post	,	
+Zip Philippines	,zip-ph	,	
+Raben Group	,raben-group	,	
+Morning Express	,morning	,	
+U-Speed Express	,u-speedex	,CN	
+Alliance Air Freight & Logistics	,alliance	,	
+UniUni	,uni	,	
+Boxberry	,boxberry	,RU	
+joomlogistics	,joomlogistics	,CN	
+Zinc	,zinc	,CN	
+fafalux	,fafalux	,	
+JNE	,jne	,	
+fgmailconnect	,fgmailconnect	,	
+FBA DE Swiship	,swiship-de	,CN	
+Lone Star Overnight	,lso	,US	
+Mail Boxed Etc	,mbe	,ES	
+FBA CA Swiship	,swiship-ca	,	
+FBA FR Swiship	,swiship-fr	,	
+FBA AU Swiship	,swiship-au	,	
+FBA JP Swiship	,swiship-jp	,	
+United Delivery Services	,uniteddeliveryservice	,	
+mircoexpress	,mircoexpress	,	
+fourseasonsfly	,fourseasonsfly	,CN	
+Skynet South Africa	,skynet-za	,	
+TD Express	,topdser	,	
+EnvFast	,envfast	,	
+cdl	,cdl	,	
+nextsmartship	,nextsmartship	,	
+cargus	,cargus	,	
+sameday	,sameday	,	
+Wyngs	,wyngs	,	
+Kintetsu World Express	,kwe	,	
+Stallion Express	,stallionexpress	,	
+Janco Ecommerce	,janco	,	
+Courant	,courant-plus	,	
+Mylerz	,mylerz	,	
+SDK Express	,sdk-express	,	
+Pressiode	,pressiode	,	
+jtexpress-vn	,jtexpress-vn	,	
+Pan-Asia International	,pan-asia	,	
+World Express	,world-express	,	
+OCS India	,ocs	,	
+NOX Night Time Express	,nox-nighttimeexpress	,	
+HuanTong Express	,htkjwl	,	
+Legion Express	,legionexp	,	
+Qwintry Logistics	,qwintry	,	
+Roadrunner Freight	,rrts	,	
+Correo Uruguayo	,correo-uy	,	
+Global Post	,goglobalpost	,	
+Logisters	,logisters	,	
+Thabit Logistics	,thabit-logistics	,	
+e-Commerce KZ	,e-commercekz	,	
+Ship It Asia	,ship-it-asia	,	
+Step Forward Freight	,stepforwardfs	,	
+Pickrr	,pickrr	,	
+ASE	,ase	,	
+Pickupp	,pickupp-mys	,	
+Bring	,bring	,	
+Lineclear Express	,lineclearexpress	,	
+Colicoli	,colicoli	,	
+DG Transporte	,dg-transporte	,	
+Kuehne Nagel	,kuehne	,	
+Danske Fragtmænd	,fragt	,	
+CJ Logistics Global	,cjlogistics	,	
+BH Posta	,bh-posta	,	
+Sicepat Ekspres	,sicepat	,	
+Asigna ES	,asigna-es	,	
+Lonestar	,lonestar	,	
+HR Parcel	,hrparcel	,	
+Celeritas Transporte	,celeritastransporte	,	
+Smooth Parcel	,smooth	,	
+Kurasi	,kurasi	,	
+Clevy Links	,clevy-links	,	
+Wizmo	,wizmo	,	
+Pitt Ohio	,pittohio	,	
+EFS Asia	,efs	,	
+Neway	,neway	,	
+NT Logistics VN	,ntlogistics-vn	,	
+Ram	,ram	,	
+CTC Express	,ctc-express	,	
+Kerry TJ Logistics	,kerrytj	,	
+XPO Logistics	,xpoweb	,	
+AAA Cooper Transportation	,aaacooper	,	
+Mxpress	,m-xpress	,	
+skybox	,skybox	,	
+Freightquote	,freightquote	,	
+Anicam Box Express	,anicamboxexpress	,	
+Pickupp	,pickupp	,	
+LICCARDI	,liccardi-express	,	
+SY Express	,chengfeng	,	
+Interparcel Au	,interparcel-au	,	
+ePost Global	,epgshipping	,	
+Interparcel Uk	,interparcel-uk	,	
+Intexpress	,intexpress	,	
+QuikenMx	,quikenmx	,	
+ProMed Deliversy	,promeddelivery	,	
+XDE Logistics	,xde	,	
+Coordinadora	,coordinadora	,	
+Hellmann	,hellmann	,	
+eRetail Logistics	,eretail	,	
+Pass The Parcel	,passtheparcel	,	
+Ydex	,ydex	,CN	
+Parcelport	,payport	,	
+ANNTO	,annto	,	
+HuiSenKy	,huisenky	,	
+Anteraja	,anteraja	,	
+GTTEXPRESS	,gttexpress	,	
+AdaPost	,ada-post	,CN	
+COMPASS EXPRESS	,comexpress	,	
+ETEEN	,eteenlog	,	
+Crazy Express	,crazyexpress	,	
+Sca Express	,scaexpress	,	
+King Freight	,kingfreight	,	
+ChinaStarLogistics	,chinastarlogistics	,	
+Royal International	,royal-international	,	
+HuiLin56	,huilin56	,	
+Jetstarexp	,jetstarexp	,	
+GIANT EXPRESS	,giantpost	,	
+Ybd Express	,ybdexpress	,CN	
+Jieborne	,jieborne	,	
+JDIEX	,jdiex	,	
+JD-168	,jd-168	,	
+Jcsuda	,jcsuda	,	
+Jumstc	,jumstc	,	
+Kaha Express	,kahaexpress	,	
+TAScourier	,tascourier	,	
+Szuem	,szuem	,	
+Janco Express	,jancoexpress	,	
+LingSong	,lingsong	,	
+LuBang56	,lubang56	,	
+MM-logi	,mm-logi	,	
+Tmw Express	,tmw-express	,	
+Mhsy88	,mhsy88	,	
+Padtf	,padtf	,	
+Renrenex	,renrenex	,	
+Sja56	,sja56	,	
+Superb Express	,superb-express	,	
+Sdto	,sdto	,	
+Usasd	,usasd	,	
+Bf-Lg	,bf-lg	,	
+XF-lt56	,xf-lt56	,	
+Ssd	,ssd	,	
+J&T International	,jetlogistic	,	
+Sendex	,sendex	,	
+Trackyourparcel	,trackyourparcel	,	
+Luben	,luben	,	
+Driverfastgo	,driverfastgo	,CN	
+BIRD SYSTEM LTD	,birdsystem	,CN	
+DPD Austria	,mydpd	,	
+CHT	,cht361	,CN	
+FLYSMAN	,flysman	,CN	
+BAI LE JIE TONG	,bljt56	,CN	
+HFD	,hfd	,	
+Better Trucks	,bettertrucks	,	
+Taimek	,taimek	,	
+Tstexp	,tstexp	,US	
+Tzky	,tzky	,CN	
+Taoplus	,taoplus	,CN	
+Taijin-logistics	,taijin-logistics	,CN	
+Ttkeurope	,ttkeurope	,UK	
+Express Courier	,expresscourierintl	,US	
+Timelytitan	,timelytitan	,NL	
+Omni2	,omni2	,CN	
+Igcaexpress	,igcaexpress	,	
+Qhxyyg	,qhxyyg	,CN	
+Yadex	,yadex	,CN	
+Yjs-China	,yjs-china	,CN	
+Aramex AU	,aramexau	,AU	
+Ecmsglobal	,ecmsglobal	,	
+Line-1 International Express	,line-1	,AU	
+Qexlogistics	,qexlogistics	,NZ	
+DPD-FR	,dpd-fr	,FR	
+Ant Eparcel	,anteparcel	,	
+Superton	,super-ton	,CN	
+RedC	,redchains	,CN	
+CH EXPRESS	,hzchgj	,CN	
+Xinjie Logistics	,sunjex	,CN	
+Xlobo	,xlobo	,US	
+JOYING BOX	,joying-box	,CN	
+SLICITY	,yz-ex	,CN	
+IML	,imlexpres	,CN	
+Yuema Express	,yue777	,US	
+Yousheng International Express	,yoseus	,US	
+BJYTSYWL	,bjytsywl	,CN	
+Monotetrad	,yidingmu	,	
+Yao Fei Kuai Di	,1fkd	,CN	
+Youhai International Express	,uhiexpress	,DE	
+Hanghangtong Logistics	,yhtlogistics	,CN	
+ACT logistic	,act-logistics	,	
+Citisprint	,citisprint	,	
+Postal State International	,youban	,DE	
+Cloud mail cross border Express	,hkems	,CN	
+Cjpacket	,cjpacket	,	
+FlashExpress PH	,flashexpress-ph	,PH	
+Yujietong	,yujtong	,CN	
+Yong Bang	,guangdongyongbang	,CN	
+Cosco Express	,zy100-express	,NSW	
+DPD Portugal	,dpd-por	,PT	
+Tianyun International	,tianyun	,CN	
+Qiyue Logistics	,qiyue	,CN	
+AxleHire	,axlehire	,	
+Yi Long Exp	,ylexp	,CN	
+SKR InterNational	,skr56	,CN	
+China Railway Flying Leopard	,fb56	,	
+Zhigu special goods	,zhiguil	,CN	
+Zhongrong Tailong	,zrtl	,CN	
+Midway Express	,ztcce	,CN	
+iCumulus Global Express	,icumulus	,	
+Xun Tian International	,xtl	,CN	
+myKN	,mykn	,	
+South American Post	,southamericapost	,	
+Central Transit	,zhonghuanus	,CN	
+China Post E-commerce	,chinapost-cb	,CN	
+YFHEX LOGISTICS	,yfhex	,CN	
+Yue Xi Logistics	,yxilogistics	,	
+DIDADI LOGISTICS TECH	,didadi	,	
+CPEX	,cpex	,CN	
+ZhongLu Logistics	,zlwww	,	
+Speedaf Express	,speedaf	,CN	
+HJYT Express	,hjyt56	,	
+First Line	,firstline56	,CN	
+QLINYUN	,qlinyun	,	
+XiangDao Supply Chain	,gzxdgyl	,	
+LvSe International	,ntlsgj	,	
+ELITEBIO	,elitebio	,	
+QYEXP	,qyexp	,	
+CY Epxress	,cy-express	,	
+Yuan Hao	,mzlyuanhao	,	
+Hua Yu	,huayu	,	
+Ka Jie	,kajie	,	
+Yisu International Logistics	,geswl	,	
+SDT	,jssdt56	,	
+SXJD	,sxjdfreight	,	
+Go Express	,goex	,	
+Shang Qiao	,shangqiao56	,	
+Shun Chang International	,shunchangguoji	,	
+CPSZY	,cpszy	,	
+MEI TAI	,56net	,	
+VALUEWAY	,valueway	,	
+LD Express	,leda-express	,	
+JIACHEN INTERNATIONAL	,jiachenexpress	,	
+UNICON EXPRESS USA	,lhexpressus	,	
+Run Bai Internation	,runbail	,	
+FT Exprss	,101iex	,	
+La Huo Express	,lahuoex	,	
+LF Express	,lf-express	,	
+Hui Feng Logistics	,huif56	,	
+LONGCPS	,longcps	,	
+Canada Air Express	,air-gtc	,	
+Bridge	,bri-ems	,	
+Polar Express	,polarexpress	,	
+HD Express	,hdc-express	,	
+HJWL	,hjwl	,	
+HOTWMS	,hotwms	,	
+Austa Internation	,austa	,	
+King Delivery	,kuaidaexp	,	
+Zhi Teng Logistics	,zhiteng	,CN	
+AIRTRANS	,airtranscourier	,CY	
+AMSEGROUP	,amsegroup	,AU	
+Hua Xi	,huaxiexpress	,CN	
+Yide International Freight Forwarder	,ydexp	,CN	
+Guangzhou Onegoal International Logistics	,ogilogistic	,CN	
+Starken	,starken	,	
+The Courier Guy Co	,thecourierguy-co	,ZA	
+Komon Express	,komonexpress	,CN	
+Xin Shu Logistics	,xs-exp	,CN	
+EBO	,ebowxp	,CN	
+ZIM Logistics	,zim	,CN	
+Kaigenlogistics	,kaigenlogistics	,CN	
+Grupo ampm	,grupoampm	,	
+Elog Luxembourg	,elog-luxembourg	,LUX	
+Frayun	,frayun	,	
+Setel Express	,setel	,	
+Smartr Logistics	,smartr	,IN	
+Holisol	,holisol	,	
+HHY Express	,hhyexpress	,CN	
+YunHui Express	,yunhui	,	
+Pidge	,pidge	,IN	
+Pargo	,pargo	,ZA	
+Gotofreight	,gotofreight	,CN	
+Dhlink	,dhlink	,CN	
+Fedex FIMS	,fedex-fims	,US	
+Yide International	,yide-international	,	
+ZMC EXPRESS	,zmcexpress	,CN	
+ConnectCo	,connect-co	,LK	
+Pilot	,pilot	,US	
+Fast Despatch Logistics	,fastdespatch	,UK	
+Maratrack	,maratrack	,CN	
+AM Home Delivery	,am-home-delivery	,US	
+GLS Slovakia	,gls-sk	,	
+Solid Logistcs	,solidlogistics	,CN	
+Biz Courier	,biz-courier	,GR	
+Courier Center	,courier-center	,GR	
+Wanmeng	,wmycc	,CN	
+Angel	,angel	,DE	
+Emons	,emons	,DE	
+CityMail	,citymail	,SE	
+Norsk Global	,norsk	,GB	
+Worldwide Logistics	,worldwide-logistics	,CN	
+Morning Global	,morninglobal	,CN	
+blexpress	,blexpress	,CN	
+mhafly	,mhafly	,CN	
+Shiprocket	,shiprocket	,IN	
+SDH Express	,sdhexpress	,CN	
+Hailify	,hailify	,	
+zhijieda	,zhijieda	,CN	
+YZK56	,yzk56	,	
+Slovak Parcel Service	,sps-sro	,SK	
+Quiqup	,quiqup	,US	
+Jet Global Express	,jet-global	,CN	
+J&T Express UAE	,jtexpress-ae	,AE	
+SpeedX	,speedx	,	
+Hunter Express	,hunterexpress	,US	
+Piggycars	,piggycars	,	
+PARCLL	,parcll	,	
+Crane Worldwide Logistics	,crane-etowertech	,US	
+YYPOST	,yypost	,CN	
+Test Carrier	,test-carrier	,CN	
+JusdaSR	,jusdasr	,CN	
+Amazon Shipping (IT)	,amazon-it	,IT	
+Dora Gate	,doragate	,CN	
+Leopards Courier	,leopardscourier	,	
+HONGHAI SUPPLY CHAIN	,gzbtygj	,CN	
+JT Express MX	,jtexpress-mx	,	
+HP Express	,hplogistics	,CN	
+A1 Post	,a1post	,PT	
+TIMISC	,timisc	,CN	
+Super Parcel	,super-parcel	,CN	
+Payo	,payo	,PH	
+jrs-express	,jrs-express	,PH	
+PKD Express	,pkd-express	,CN	
+SFYD Express	,sfydexpress	,CN	
+Link Supply Chain	,sz-linkexpress	,CN	
+Blue Leopard	,blue-leopard	,CN	
+Aras Kargo	,araskargo	,TR	
+CMK	,cmkexpress	,CN	
+METEOR EXPRESS	,emhsz	,CN	
+Whats Ship	,whatsship	,CN	
+YIXIANG	,yixiang	,CN	
+Segmail	,segmail	,	
+Good Express	,good-express	,	
+Dropshipman	,dropshipman	,	
+Dealfy	,dealfy	,CN	
+PostEX	,postex	,	
+UDS	,uds56	,	
+StarWish	,star-wish	,CN	
+DHL API	,dhl-unified-api	,DE	
+AJEX	,aj-ex	,	
+Toptrans	,toptrans	,	
+OmgoExpress	,omgoexpress	,	
+PINGDA EXPRESS	,pingda56	,	
+XYS Logistics	,xyslogistics	,CN	
+JCH	,jch-exp	,	
+AoYue	,51aoyue	,CN	
+KYOUNGDONG(경동택배)	,kdexp	,KR	
+CEL HCCD	,hccd	,CN	
+EAGLE CROSS BORDER	,x-eagle	,CN	
+GYY	,guangyy56	,CN	
+ZIS	,zis-one	,CN	
+Fast Horse (US)	,fast-house-us	,CN	
+GLS Canada	,gls-canada	,	
+Flash Express MY	,flashexpress-my	,	
+BUFFALO ZA	,buffaloex-za	,	
+Adico	,adico	,	
+LATAM YOU	,latamyou	,	
+Geis Poland	,geis-pl	,	
+DYJ Express	,dyj-express	,	
+LB Logistics	,longbiao56	,	
+GMS Worldwide Express	,gmsworldwide	,	
+HepsiJET	,hepsijet	,	
+HoYang Express	,hoyangexpress	,CN	
+JingLe Express	,jingleexpressx	,	
+深圳市晶晟国际物流	,jc-express	,	
+Gebrüder Weiss Germany	,gw-world	,	
+CIRRO	,cirroparcel	,	
+GLS Germany	,gls-de	,DE	
+Woori Courier	,honamlogis	,	
+Day One Track	,dayonetrack	,CN	
+Daylight Transport	,dylt	,	
+ZMETAPORT	,zmetaport	,CN	
+EFW Track	,efwtrack	,	
+Hermes Einrichtungs Service	,myhes-de	,DE	
+Honold Germany	,honold	,	
+Bejot Logistics	,bejotlogistics	,	
+IDS Germany	,ids-logistik	,	
+DPD Czech Republic	,dpd-cz	,	
+JCW	,jcwexpress	,	
+DPD Netherlands	,dpd-nl	,NL	
+Pro Carrier	,wearepro	,UK	
+ICS courier	,ics-ca	,CA	
+Passport Shipping	,passport-shipping	,	
+DPD Croatia	,dpd-hr	,	
+Trunkrs	,trunkrs-nl	,	
+4cus	,4cus	,	
+Zufall Germany	,myzufall-de	,	
+DPD SK	,dpd-sk	,	
+Lanqichuhai	,lanqichuhai	,	
+Starlinks	,starlinks	,	
+DaoExpress	,express-dy	,	
+Maersk	,maersk	,	
+Packfleet	,packfleet	,	
+Express LJ	,express-lj	,CN	
+Final Miles Pros	,finalmilespros	,	
+Aramex NZ	,aramex-nz	,	
+WEI XIANG SU	,wexsu	,CN	
+YSD Post	,ysdpost	,CN	
+SPEEDY	,speedy	,	
+QYUN GLOBAL	,qyunexpress	,CN	
+UDEL	,udel	,UK	
+DPD Switzerland	,dpd-ch	,CH	
+Bai Zhou Huo Yun	,ywbzexpress	,CN	
+Wan Yu Yun Tong	,wanyuyuntong	,CN	
+Liefergrün	,liefergruen	,	
+WCXEX	,wcxex	,CN	
+DAI Post	,daipost	,	
+Shree Anjani Courier	,shreeanjanicourier	,	
+GLS(HR)	,gls-hr	,HR	
+SJ KD	,sj-kd	,CN	
+A TU HORA EXPRESS	,atuhoraexpress	,	
+VANJExpress	,vanjexpress	,CN	
+GD YHWL	,gdyhwl	,CN	
+SHENG HONG International Logistics	,sh9156	,CN	
+GOFO	,gofoexpress	,	
+Fzrexp	,fzrexp	,	
+Zippex	,zippex	,CN	
+M&H GuoJi	,mhgj	,CN	
+Yurtici Kargo	,yurticikargo	,	
+Fast Horse Express (AU)	,fh-au	,	
+J&T Brazil	,jtexpress-br	,	
+KUNYONG EXPRESS	,kunyong	,	
+Coolrunner	,coolrunner-dk	,	
+Eparcel	,eparcel-us	,	
+FAN SHENG	,fswuliu	,CN	
+YTO International	,yto-global	,	
+GTS Express	,gtsexpress	,	
+GUOO Logistics	,hrbguoo	,CN	
+TQL	,tql	,	
+Mark Express	,markexpress	,	
+AIT Worldwide Logistics	,aitworldwide	,	
+Etrak	,etrak	,	
+Movin	,movin	,	
+BEST Express (Vietnam)	,best-vn	,VN	
+3PE Express Inc	,3peex	,	
+FleetOptics	,fleetopticsinc	,	
+Northline	,northline	,	
+Flexport	,flexport	,	
+ural乌拉尔国际物流	,ural	,RO	
+AC Logistics	,ac-logistics	,	
+Z1Express	,z1express	,	
+WoooLinks上海领链物流	,wooolink	,CN	
+Orlen Paczka	,orlen-paczka	,	
+Nationex	,nationex	,	
+DealerSend	,dealersend	,	
+Tawssil	,tawssil	,	
+piggycars us	,piggycars-us	,US	
+kart2door	,kart2door	,US	
+bjshomedelivery	,bjs	,EN	
+kunyi	,kunyi	,	
+捷谱斯国际物流	,jpsgj	,	
+FDM Logistics	,fdmlogistics	,	
+Ambro Express	,ambroexpress	,	
+Posta Bez Hranic	,postabezhranic	,	
+Lion Parcel	,lion-parcel	,	
+ECE Logistics	,ecelogistics	,	
+Chunil Cargo	,chunil	,	
+Lotte Global Logistics	,lotteglogis	,	
+Go Swift	,goswift	,	
+Sending	,sending	,	
+Bosta	,bosta	,	
+Bestfulfill	,bestfulfill	,	
+RHENUS	,rhenus	,	
+Emile	,emile	,	
+SPL Express	,spl-express	,	
+Starlinks Global	,starlinks-global	,	
+LX Pantos	,epantos	,	
+SHREE MAHAVIR EXPRESS SERVICES	,shreemahavir	,	
+通云航国际供应链	,tongyhang	,	
+Closer Logistics	,closerlogistics	,	
+ZTO FREIGHT	,zto56	,	
+Streck Germany	,streck-de	,	
+Maegmant	,maegmant	,	
+LianSiZhou	,lsztec	,	
+逸达物流	,yida-express	,	
+Quickpac	,quickpac	,	
+Kronos Express	,kronos-express	,	
+LX Pantos	,lxpantos	,	
+犇犇国际	,benben	,	
+远传国际	,yuanchuan	,	
+ST Courier	,st-courier	,	
+八好国际	,bahao	,	
+佛山乾和	,fsqh	,	
+Hispapost	,hispapost	,	
+Código Envío	,codigo-envio	,	
+四海捷运	,sihi-express	,	
+FedEx API	,fedex-unified-api	,	
+3CLIQUES	,3cliques	,	
+Trax Courier	,trax	,	
+Aquiline International	,aquiline	,	
+Maple Logistics Express	,maple-logistics	,	
+Relais Colis	,relaiscolis	,	
+BYT Carrier	,byt	,	
+SummitSpeed	,summitspeed	,	
+HanBang	,hbgj	,	
+HuaHai Express	,huahai	,	
+Peddler Express	,peddler	,	
+Jumppoint	,jumppoint	,	
+UPS API	,ups-unified-api	,	
+Obibox	,obibox	,	
+Logen	,ilogen	,KO	
+western post	,western-post	,	
+ULALA	,ulala	,	
+永繁物流	,fanoq	,	
+CTS	,ctsgroup	,	
+KUN EXPRESS	,kun-express	,	
+Jeebly	,jeebly	,	
+GLOBALTRANS	,globaltrans	,	
+Tian Hui Hen Yuan	,51thhy	,	
+Needletail Logistics	,ndtl-au	,	
+APC overnight	,apc-overnight	,	
+Mailing Technology	,mailing-technology	,	
+Mailog	,mailog	,	
+First Global Logistics	,first-global-logistics	,	
+CRANE Worldwide Logistics	,craneww	,	
+Amazon Shipping (ES)	,amazon-es	,	
+Xingyou	,xingyou	,	
+Shippie	,shippie	,	
+Amalgamated	,amaldist	,	
+Techlink	,techlink	,	
+Flashbox	,flashbox	,	
+World Package	,worldpackage	,	
+Ward Transport & Logistics	,wardtlc	,	
+Planzer	,planzer	,	
+EG Express	,egyptexpress	,	
+Victorian freight Specialists	,vfs	,	
+YUANPENG SUPPLY CHAIN	,yuanpeng	,	
+HUA EXPRESS	,huaexpress	,	
+Amazon Shipping (FR)	,amazon-fr	,	
+AIT Home Delivery	,aithd	,	
+Wiselution	,wiselution	,	
+Allegro	,allegro	,	
+Earlyex	,earlyex	,	
+Expressone Bg	,expressone-bg	,	
+Smart Consign	,smartconsign	,	
+Uni Digital Logistics	,unitrade	,	
+Sendparcel	,sendparcel	,	
+CallCourier	,callcourier	,	
+Hua Ya Express	,hyyt	,	
+Veho	,veho	,	
+CTTY	,ctty	,	
+APX Logistics	,apx-logistics	,	
+France Express	,franch-express	,	
+A. Duie Pyle	,a-duie-pyle	,	
+Reason Transport	,reason-transport	,	
+QTrack	,qtrack	,	
+GLS Freight	,gls-us-freight	,	

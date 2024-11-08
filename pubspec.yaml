@@ -46,6 +46,7 @@ dependencies:
   dotted_line: ^3.2.3
   get_storage: ^2.1.1
   dio: ^5.7.0
+  csv: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,7 @@ flutter:
   assets:
     - assets/fonts/
     - assets/images/
+    - assets/static/
     - assets/svgs/
 
   # An image asset can refer to one or more resolution-specific "variants", see

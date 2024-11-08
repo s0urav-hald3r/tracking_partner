@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:tracking_partner/components/new_parcel_view/carrier_section.dart';
 import 'package:tracking_partner/components/new_parcel_view/parcel_name_section.dart';
 import 'package:tracking_partner/components/new_parcel_view/package_icon_section.dart';
 import 'package:tracking_partner/components/new_parcel_view/tracking_number_section.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/controllers/home_controller.dart';
 
 class NewParcelView extends StatelessWidget {
   const NewParcelView({super.key});
@@ -12,6 +14,7 @@ class NewParcelView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: primaryColor,
         title: Text(
@@ -29,8 +32,8 @@ class NewParcelView extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
+      body: Obx(
+        () => Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Column(
@@ -46,9 +49,11 @@ class NewParcelView extends StatelessWidget {
               width: double.infinity,
               margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
               child: ElevatedButton(
-                onPressed: () {
-                  // Define action here
-                },
+                onPressed: HomeController.instance.isSearching
+                    ? null
+                    : () {
+                        // Define action here
+                      },
                 child: Text(
                   'Add Parcel',
                   style: TextStyle(
