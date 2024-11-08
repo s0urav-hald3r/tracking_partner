@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:csv/csv.dart';
@@ -9,6 +10,7 @@ import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/config/navigation.dart';
 import 'package:tracking_partner/models/parcel_card_model.dart';
 import 'package:tracking_partner/services/dio_client.dart';
+import 'package:tracking_partner/utlis/local_storage.dart';
 import 'package:tracking_partner/utlis/popup.dart';
 
 class HomeController extends GetxController {
@@ -23,7 +25,23 @@ class HomeController extends GetxController {
   void onInit() {
     super.onInit();
     parcelIcon = parcelIcons[iconIndex];
+    retriveParcels();
     loadCsvData();
+  }
+
+  Future<void> retriveParcels() async {
+    isLoading = true;
+    String jsonString = LocalStorage.getData(parcelList, KeyType.STR);
+
+    if (jsonString.isNotEmpty) {
+      List<dynamic> jsonList = jsonDecode(jsonString);
+      parcelCardList =
+          jsonList.map((json) => ParcelCardModel.fromJson(json)).toList();
+    } else {
+      parcelCardList = <ParcelCardModel>[];
+    }
+
+    isLoading = false;
   }
 
   Future<void> loadCsvData() async {
@@ -122,6 +140,11 @@ class HomeController extends GetxController {
     );
 
     _parcelCardList.add(parcelCardModel);
+
+    String jsonString =
+        jsonEncode(parcelCardList.map((model) => model.toJson()).toList());
+
+    LocalStorage.addData(parcelList, jsonString);
 
     Navigation.pop();
   }
