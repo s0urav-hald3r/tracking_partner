@@ -38,8 +38,10 @@ class _TrackParcelViewState extends State<TrackParcelView> {
     index = controller.parcelCardList
         .indexWhere((parcel) => parcel.trackingNumber == widget.trackingId);
 
-    controller.parcelCardList[index] =
-        parcelCard.copyWith(status: parcelDetails?.shipments.first.status);
+    if (parcelDetails!.shipments.isNotEmpty) {
+      controller.parcelCardList[index] =
+          parcelCard.copyWith(status: parcelDetails?.shipments.first.status);
+    }
   }
 
   @override
@@ -73,6 +75,7 @@ class _TrackParcelViewState extends State<TrackParcelView> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TopCard(parcel: controller.parcelCardList[index]),
+
               TrackSection(parcel: parcelDetails!),
               SizedBox(height: 85.h),
               // Container(

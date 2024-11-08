@@ -32,18 +32,42 @@ class TrackSection extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.h),
-            Expanded(
-              child: ListView.builder(
-                padding: EdgeInsets.zero,
-                itemCount: parcel.shipments.first.states.length,
-                itemBuilder: (context, index) {
-                  return StepTile(
-                    step: parcel.shipments.first.states[index],
-                    isLast: index == 0,
-                  );
-                },
-              ),
-            ),
+            parcel.shipments.isNotEmpty &&
+                    parcel.shipments.first.states.isNotEmpty
+                ? Expanded(
+                    child: ListView.builder(
+                      padding: EdgeInsets.zero,
+                      itemCount: parcel.shipments.first.states.length,
+                      itemBuilder: (context, index) {
+                        return StepTile(
+                          step: parcel.shipments.first.states[index],
+                          isLast: index == 0,
+                        );
+                      },
+                    ),
+                  )
+                : Expanded(
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.timeline_outlined,
+                            size: 24.sp,
+                            color: secondaryColor,
+                          ),
+                          SizedBox(height: 5.h),
+                          Text(
+                            'No records found',
+                            style: TextStyle(
+                              fontSize: 12.sp,
+                              color: secondaryColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
           ],
         ),
       ),
