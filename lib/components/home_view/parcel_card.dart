@@ -41,7 +41,8 @@ class ParcelCard extends StatelessWidget {
         ),
         title: InkWell(
           onTap: () {
-            Navigation.push(const TrackParcelView());
+            Navigation.push(
+                TrackParcelView(trackingId: parcel.trackingNumber!));
           },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

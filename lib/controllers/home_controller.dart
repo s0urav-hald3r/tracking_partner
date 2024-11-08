@@ -9,6 +9,7 @@ import 'package:get/get.dart' hide Response;
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/config/navigation.dart';
 import 'package:tracking_partner/models/parcel_card_model.dart';
+import 'package:tracking_partner/models/parcel_details_model.dart';
 import 'package:tracking_partner/services/dio_client.dart';
 import 'package:tracking_partner/utlis/local_storage.dart';
 import 'package:tracking_partner/utlis/popup.dart';
@@ -75,6 +76,7 @@ class HomeController extends GetxController {
   final RxString _parcelIcon = ''.obs;
   final RxBool _isSearching = false.obs;
   final RxBool _isLoading = false.obs;
+  final RxBool _isDetailsLoading = false.obs;
   final RxString _carrierName = ''.obs;
   final RxList<List<dynamic>> _carrierData = <List<dynamic>>[].obs;
   final RxList<ParcelCardModel> _parcelCardList = <ParcelCardModel>[].obs;
@@ -84,6 +86,7 @@ class HomeController extends GetxController {
   String get parcelIcon => _parcelIcon.value;
   bool get isSearching => _isSearching.value;
   bool get isLoading => _isLoading.value;
+  bool get isDetailsLoading => _isDetailsLoading.value;
   String get carrierName => _carrierName.value;
   List get carrierData => _carrierData;
   List<ParcelCardModel> get parcelCardList => _parcelCardList;
@@ -93,6 +96,7 @@ class HomeController extends GetxController {
   set parcelIcon(icon) => _parcelIcon.value = icon;
   set isSearching(status) => _isSearching.value = status;
   set isLoading(status) => _isLoading.value = status;
+  set isDetailsLoading(status) => _isDetailsLoading.value = status;
   set carrierName(icon) => _carrierName.value = icon;
   set carrierData(newData) => _carrierData.value = newData;
   set parcelCardList(newData) => _parcelCardList.value = newData;
@@ -147,6 +151,41 @@ class HomeController extends GetxController {
     LocalStorage.addData(parcelList, jsonString);
 
     Navigation.pop();
+  }
+
+  Future<ParcelDetailsModel?> getParcelDetails(trackingId) async {
+    try {
+      ParcelDetailsModel parcelDetailsModel;
+
+      isDetailsLoading = true;
+
+      Response responseOne = await _dioClient
+          .post('https://parcelsapp.com/api/v3/shipments/tracking', body: {
+        "shipments": [
+          {"trackingId": trackingId, "destinationCountry": "MOCK_COUNTRY"}
+        ],
+        "language": "en",
+        "apiKey": pAPIKey
+      });
+
+      parcelDetailsModel = ParcelDetailsModel.fromJson(responseOne.data);
+
+      if (parcelDetailsModel.uuid != null) {
+        Response responseTwo = await _dioClient.get(
+            'https://parcelsapp.com/api/v3/shipments/tracking?uuid=${parcelDetailsModel.uuid}&apiKey=$pAPIKey');
+
+        parcelDetailsModel = ParcelDetailsModel.fromJson(responseTwo.data);
+
+        isDetailsLoading = false;
+        return parcelDetailsModel;
+      }
+
+      isDetailsLoading = false;
+      return parcelDetailsModel;
+    } catch (e) {
+      isDetailsLoading = false;
+      return null;
+    }
   }
 
   clearState() {

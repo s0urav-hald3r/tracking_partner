@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/models/parcel_card_model.dart';
 
 class TopCard extends StatelessWidget {
-  const TopCard({
-    super.key,
-  });
+  final ParcelCardModel parcel;
+  const TopCard({super.key, required this.parcel});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,10 @@ class TopCard extends StatelessWidget {
                   color: const Color(0xFFF8F8F8),
                 ),
                 child: Center(
-                  child: SvgPicture.asset(barcode),
+                  child: Text(
+                    parcel.packageIcon!,
+                    style: TextStyle(fontSize: 20.sp),
+                  ),
                 ),
               ),
               SizedBox(width: 15.w),
@@ -43,7 +45,7 @@ class TopCard extends StatelessWidget {
                 children: [
                   SizedBox(height: 2.5.h),
                   Text(
-                    'Parcel name',
+                    parcel.parcelName ?? 'Parcel name',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14.sp,
@@ -53,7 +55,7 @@ class TopCard extends StatelessWidget {
                   ),
                   SizedBox(height: 2.5.h),
                   Text(
-                    'J002576877423000',
+                    parcel.trackingNumber ?? 'J002576877423000',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12.sp,
@@ -85,7 +87,7 @@ class TopCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'DHL Services',
+                    parcel.carrier ?? 'NA',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12.sp,
@@ -108,7 +110,7 @@ class TopCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '2 3 Days',
+                    parcel.estimatedTime ?? 'NA',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12.sp,
@@ -131,7 +133,7 @@ class TopCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Processing',
+                    parcel.status ?? 'NA',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12.sp,

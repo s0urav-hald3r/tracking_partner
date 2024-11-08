@@ -1,11 +1,46 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:tracking_partner/components/track_parcel_view/top_card.dart';
 import 'package:tracking_partner/components/track_parcel_view/track_section.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/controllers/home_controller.dart';
+import 'package:tracking_partner/models/parcel_card_model.dart';
+import 'package:tracking_partner/models/parcel_details_model.dart' as pdm;
 
-class TrackParcelView extends StatelessWidget {
-  const TrackParcelView({super.key});
+class TrackParcelView extends StatefulWidget {
+  final String trackingId;
+  const TrackParcelView({super.key, required this.trackingId});
+
+  @override
+  State<TrackParcelView> createState() => _TrackParcelViewState();
+}
+
+class _TrackParcelViewState extends State<TrackParcelView> {
+  late pdm.ParcelDetailsModel? parcelDetails;
+  late ParcelCardModel parcelCard;
+  late int index;
+  final controller = HomeController.instance;
+
+  @override
+  void initState() {
+    super.initState();
+    callAPI();
+  }
+
+  Future<void> callAPI() async {
+    parcelDetails = await controller.getParcelDetails(widget.trackingId);
+
+    parcelCard = controller.parcelCardList
+        .firstWhere((parcel) => parcel.trackingNumber == widget.trackingId);
+
+    index = controller.parcelCardList
+        .indexWhere((parcel) => parcel.trackingNumber == widget.trackingId);
+
+    controller.parcelCardList[index] =
+        parcelCard.copyWith(status: parcelDetails?.shipments.first.status);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,30 +62,39 @@ class TrackParcelView extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const TopCard(),
-          const TrackSection(),
-          SizedBox(height: 85.h),
-          // Container(
-          //   height: 45.h,
-          //   width: double.infinity,
-          //   margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-          //   child: ElevatedButton(
-          //     onPressed: () {
-          //       // Define action here
-          //     },
-          //     child: Text(
-          //       'View Parcel Items',
-          //       style: TextStyle(
-          //         fontSize: 14.sp,
-          //         fontWeight: FontWeight.w700,
-          //       ),
-          //     ),
-          //   ),
-          // )
-        ],
+      body: Obx(
+        () {
+          if (controller.isDetailsLoading) {
+            return const Center(
+              child: CupertinoActivityIndicator(),
+            );
+          }
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TopCard(parcel: controller.parcelCardList[index]),
+              const TrackSection(),
+              SizedBox(height: 85.h),
+              // Container(
+              //   height: 45.h,
+              //   width: double.infinity,
+              //   margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+              //   child: ElevatedButton(
+              //     onPressed: () {
+              //       // Define action here
+              //     },
+              //     child: Text(
+              //       'View Parcel Items',
+              //       style: TextStyle(
+              //         fontSize: 14.sp,
+              //         fontWeight: FontWeight.w700,
+              //       ),
+              //     ),
+              //   ),
+              // )
+            ],
+          );
+        },
       ),
     );
   }
