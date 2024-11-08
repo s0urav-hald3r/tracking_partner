@@ -8,8 +8,21 @@ import 'package:tracking_partner/components/new_parcel_view/tracking_number_sect
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/home_controller.dart';
 
-class NewParcelView extends StatelessWidget {
+class NewParcelView extends StatefulWidget {
   const NewParcelView({super.key});
+
+  @override
+  State<NewParcelView> createState() => _NewParcelViewState();
+}
+
+class _NewParcelViewState extends State<NewParcelView> {
+  final controller = HomeController.instance;
+
+  @override
+  void dispose() {
+    super.dispose();
+    controller.clearState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +62,11 @@ class NewParcelView extends StatelessWidget {
               width: double.infinity,
               margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
               child: ElevatedButton(
-                onPressed: HomeController.instance.isSearching
+                onPressed: controller.isSearching
                     ? null
                     : () {
                         // Define action here
+                        controller.addParcel();
                       },
                 child: Text(
                   'Add Parcel',

@@ -1,12 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/config/navigation.dart';
+import 'package:tracking_partner/models/parcel_card_model.dart';
 import 'package:tracking_partner/views/track_parcel_view.dart';
 
 class ParcelCard extends StatelessWidget {
-  const ParcelCard({super.key});
+  final ParcelCardModel parcel;
+  const ParcelCard({super.key, required this.parcel});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,10 @@ class ParcelCard extends StatelessWidget {
             color: const Color(0xFFF8F8F8),
           ),
           child: Center(
-            child: SvgPicture.asset(barcode),
+            child: Text(
+              parcel.packageIcon!,
+              style: TextStyle(fontSize: 20.sp),
+            ),
           ),
         ),
         shape: RoundedRectangleBorder(
@@ -37,16 +41,13 @@ class ParcelCard extends StatelessWidget {
         ),
         title: InkWell(
           onTap: () {
-            Navigator.push(
-              context,
-              CupertinoPageRoute(builder: (context) => const TrackParcelView()),
-            );
+            Navigation.push(const TrackParcelView());
           },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Parcel name',
+                parcel.parcelName ?? 'Parcel name',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14.sp,
@@ -55,7 +56,7 @@ class ParcelCard extends StatelessWidget {
                 ),
               ),
               Text(
-                'J002576877423000',
+                parcel.trackingNumber ?? 'J002576877423000',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 12.sp,
@@ -89,7 +90,7 @@ class ParcelCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'DHL Services',
+                    parcel.carrier ?? 'NA',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12.sp,
@@ -112,7 +113,7 @@ class ParcelCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '2 3 Days',
+                    parcel.estimatedTime ?? 'NA',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12.sp,
@@ -135,7 +136,7 @@ class ParcelCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Processing',
+                    parcel.status ?? 'NA',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12.sp,

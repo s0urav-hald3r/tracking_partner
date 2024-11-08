@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/config/navigation.dart';
 import 'package:tracking_partner/controllers/dashboard_controller.dart';
 import 'package:tracking_partner/controllers/home_controller.dart';
 import 'package:tracking_partner/controllers/onboarding_controller.dart';
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
+          navigatorKey: Navigation.navigatorKey,
           home: LocalStorage.getData(isOnboardingDone, KeyType.BOOL)
               ? const DashboardView()
               : const OnboardingView(),
