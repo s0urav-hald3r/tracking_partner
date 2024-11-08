@@ -73,7 +73,7 @@ class _TrackParcelViewState extends State<TrackParcelView> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TopCard(parcel: controller.parcelCardList[index]),
-              const TrackSection(),
+              TrackSection(parcel: parcelDetails!),
               SizedBox(height: 85.h),
               // Container(
               //   height: 45.h,

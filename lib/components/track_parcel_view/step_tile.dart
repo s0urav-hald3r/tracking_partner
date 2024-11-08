@@ -1,31 +1,33 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 import 'package:tracking_partner/config/constants.dart';
-import 'package:tracking_partner/models/step_model.dart';
+import 'package:tracking_partner/models/parcel_details_model.dart' as pdm;
 
 class StepTile extends StatelessWidget {
-  final StepModel step;
+  final pdm.State step;
+  final bool isLast;
 
-  const StepTile({super.key, required this.step});
+  const StepTile({super.key, required this.step, required this.isLast});
 
   @override
   Widget build(BuildContext context) {
+    final date = DateFormat("dd MM yyyy hh:mm:ss a")
+        .format(step.date ?? DateTime.now().toLocal());
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Column(
           children: [
             Icon(
-              step.isCompleted
-                  ? Icons.check_circle
-                  : Icons.radio_button_checked,
-              color:
-                  step.isHighlighted ? const Color(0xFF29BE10) : secondaryColor,
+              Icons.check_circle,
+              color: isLast ? const Color(0xFF29BE10) : secondaryColor,
               size: 24.sp,
             ),
             Container(
-              height: 50.h,
+              height: 60.h,
               margin: EdgeInsets.symmetric(vertical: 2.5.h),
               child: DottedLine(
                 direction: Axis.vertical,
@@ -33,8 +35,7 @@ class StepTile extends StatelessWidget {
                 lineLength: double.infinity,
                 lineThickness: 1.0,
                 dashLength: 2.0,
-                dashColor:
-                    step.isCompleted ? const Color(0xFF29BE10) : secondaryColor,
+                dashColor: isLast ? const Color(0xFF29BE10) : secondaryColor,
                 dashRadius: 0.0,
                 dashGapLength: 4.0,
                 dashGapColor: Colors.transparent,
@@ -51,11 +52,9 @@ class StepTile extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 1.h),
                 child: Text(
-                  step.title,
+                  step.status ?? 'Unknown status',
                   style: TextStyle(
-                    color: step.isHighlighted
-                        ? const Color(0xFF29BE10)
-                        : greyColor,
+                    color: isLast ? const Color(0xFF29BE10) : greyColor,
                     fontWeight: FontWeight.w600,
                     fontSize: 14.sp,
                   ),
@@ -63,7 +62,7 @@ class StepTile extends StatelessWidget {
               ),
               SizedBox(height: 5.h),
               Text(
-                step.subtitle,
+                '$date ${step.location ?? ''}',
                 style: TextStyle(
                   color: greyColor,
                   fontSize: 11.sp,
