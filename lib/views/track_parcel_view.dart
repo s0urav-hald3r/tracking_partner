@@ -41,6 +41,7 @@ class _TrackParcelViewState extends State<TrackParcelView> {
     if (parcelDetails!.shipments.isNotEmpty) {
       controller.parcelCardList[index] =
           parcelCard.copyWith(status: parcelDetails?.shipments.first.status);
+      controller.saveToLocal();
     }
   }
 

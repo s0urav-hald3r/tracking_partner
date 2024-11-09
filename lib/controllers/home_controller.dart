@@ -69,7 +69,22 @@ class HomeController extends GetxController {
   }
 
   // List of icons to display in the list
-  final List parcelIcons = ['👞', '📱', '📦', '💻', '👕', '💄', '⚽️', '🕶️'];
+  final List parcelIcons = [
+    '👞',
+    '📱',
+    '📦',
+    '💻',
+    '👕',
+    '💄',
+    '⚽️',
+    '🕶️',
+    '🖥️',
+    '💊',
+    '📚',
+    '🏏',
+    '🎒',
+    '🧸',
+  ];
 
   // Private variables
   final RxInt _iconIndex = 0.obs;
@@ -145,12 +160,16 @@ class HomeController extends GetxController {
 
     _parcelCardList.add(parcelCardModel);
 
+    saveToLocal();
+
+    Navigation.pop();
+  }
+
+  void saveToLocal() {
     String jsonString =
         jsonEncode(parcelCardList.map((model) => model.toJson()).toList());
 
     LocalStorage.addData(parcelList, jsonString);
-
-    Navigation.pop();
   }
 
   Future<ParcelDetailsModel?> getParcelDetails(trackingId) async {
