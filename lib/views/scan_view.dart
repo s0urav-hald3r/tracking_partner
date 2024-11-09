@@ -54,8 +54,6 @@ class _ScanViewState extends State<ScanView> {
   void _onQRViewCreated(QRViewController controller) {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
-      controller.pauseCamera();
-
       String scannedCode = scanData.code.toString();
       // Log the entire scanned data
       log(scannedCode);
@@ -67,6 +65,7 @@ class _ScanViewState extends State<ScanView> {
       if (match != null) {
         String trackingNumber = match.group(0) ?? '';
         log('Tracking Number: $trackingNumber');
+        controller.pauseCamera();
 
         // Check if the widget is still mounted before navigating
         if (mounted) {
