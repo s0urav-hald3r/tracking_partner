@@ -117,9 +117,13 @@ class HomeController extends GetxController {
   set parcelCardList(newData) => _parcelCardList.value = newData;
 
   // Function for API calls
-  Future<void> detectPartner() async {
+  Future<void> detectPartner({String? trackingId}) async {
     try {
       isSearching = true;
+
+      if (trackingId != null) {
+        tNumberController.text = trackingId;
+      }
 
       Response response = await _dioClient.post(
           'https://api.trackingmore.com/v4/couriers/detect',

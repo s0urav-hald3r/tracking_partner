@@ -44,11 +44,12 @@ class TrackingNumberSection extends StatelessWidget {
             ),
             padding: EdgeInsets.only(left: 10.w),
             suffix: InkWell(
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                String trackingId = await Navigator.push(
                   context,
                   CupertinoPageRoute(builder: (context) => const ScanView()),
                 );
+                HomeController.instance.detectPartner(trackingId: trackingId);
               },
               child: Padding(
                 padding: EdgeInsets.only(right: 10.w, left: 10.w),

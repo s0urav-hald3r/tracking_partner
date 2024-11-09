@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -13,7 +14,6 @@ class ScanView extends StatefulWidget {
 
 class _ScanViewState extends State<ScanView> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
-  Barcode? result;
   QRViewController? controller;
 
   // In order to get hot reload to work we need to pause the camera if the platform
@@ -35,6 +35,11 @@ class _ScanViewState extends State<ScanView> {
         key: qrKey,
         onQRViewCreated: _onQRViewCreated,
         cameraFacing: CameraFacing.back,
+        formatsAllowed: const [
+          BarcodeFormat.qrcode,
+          BarcodeFormat.code128,
+          BarcodeFormat.ean13
+        ],
         overlay: QrScannerOverlayShape(
           cutOutSize: 285.sp,
           borderColor: const Color(0xFFFD2323),
@@ -49,9 +54,25 @@ class _ScanViewState extends State<ScanView> {
   void _onQRViewCreated(QRViewController controller) {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
-      setState(() {
-        result = scanData;
-      });
+      controller.pauseCamera();
+
+      String scannedCode = scanData.code.toString();
+      // Log the entire scanned data
+      log(scannedCode);
+
+      // Use a regular expression to find the tracking number (example format: MS followed by digits)
+      RegExp trackingNumberPattern = RegExp(r'\b(FMPP|MS)\d+\b');
+      Match? match = trackingNumberPattern.firstMatch(scannedCode);
+
+      if (match != null) {
+        String trackingNumber = match.group(0) ?? '';
+        log('Tracking Number: $trackingNumber');
+
+        // Check if the widget is still mounted before navigating
+        if (mounted) {
+          Navigator.pop(context, trackingNumber);
+        }
+      }
     });
   }
 
