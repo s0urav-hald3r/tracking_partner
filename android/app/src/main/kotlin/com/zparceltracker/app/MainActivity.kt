@@ -1,4 +1,4 @@
-package com.example.tracking_partner
+package com.zparceltracker.app
 
 import io.flutter.embedding.android.FlutterActivity
 
