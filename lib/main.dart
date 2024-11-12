@@ -1,9 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/config/navigation.dart';
+import 'package:tracking_partner/config/store_config.dart';
 import 'package:tracking_partner/controllers/dashboard_controller.dart';
 import 'package:tracking_partner/controllers/home_controller.dart';
 import 'package:tracking_partner/controllers/onboarding_controller.dart';
@@ -21,6 +25,14 @@ Future<void> main() async {
 
   // Initialize storage
   await GetStorage.init();
+
+  // Configure store for in-app purchase
+  if (Platform.isIOS) {
+    StoreConfig(
+      store: Store.appStore,
+      apiKey: appleApiKey,
+    );
+  }
 
   runApp(const MyApp());
 }

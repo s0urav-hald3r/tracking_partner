@@ -54,3 +54,12 @@ const String parcelList = 'parcelList';
 const String tAPIKey = '7cxirso0-xa5b-9uez-sh82-5uzpbknax2be';
 const String pAPIKey =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJjNTdkZjg1MC05YzE4LTExZWYtOGViMS1iNTJjNmY1ZGZkYWUiLCJzdWJJZCI6IjY3MmIyODFmOTVjMTYwNGE5YTA2ZjAwOCIsImlhdCI6MTczMDg4MTU2N30.NbQHXxJgTfiy9rm4tC5Bee1cWEPStfvReDc_KmVVti8';
+
+//TO DO: add the entitlement ID from the RevenueCat dashboard that is activated upon successful in-app purchase for the duration of the purchase.
+const entitlementID = 'premium_access';
+
+//TO DO: add your subscription terms and conditions
+const footerText = "Don't forget to add your purchases terms and conditions.";
+
+//TO DO: add the Apple API key for your app from the RevenueCat dashboard: https://app.revenuecat.com
+const appleApiKey = 'appl_gwOpPuGhOFJrExgbHfZLYaxFfQM';
