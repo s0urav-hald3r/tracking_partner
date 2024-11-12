@@ -23,10 +23,7 @@ class _PurchaseViewState extends State<PurchaseView> {
   @override
   void initState() {
     super.initState();
-    _controller = ValueNotifier<bool>(settingsController.isFreeTrialEnable);
-    _controller.addListener(() {
-      settingsController.isFreeTrialEnable = _controller.value;
-    });
+    _controller = ValueNotifier<bool>(settingsController.plan == Plan.FREE);
   }
 
   @override
@@ -74,16 +71,18 @@ class _PurchaseViewState extends State<PurchaseView> {
                     color: textColor,
                   ),
                 ),
-                AdvancedSwitch(
-                  controller: _controller,
-                  activeColor: Colors.green,
-                  inactiveColor: Colors.grey,
-                  activeChild: const Text('I'),
-                  inactiveChild: const Text('O'),
-                  initialValue: settingsController.isFreeTrialEnable,
-                  width: 36.w,
-                  height: 18.h,
-                  enabled: true,
+                Obx(
+                  () => AdvancedSwitch(
+                    controller: _controller,
+                    activeColor: Colors.green,
+                    inactiveColor: Colors.grey,
+                    activeChild: const Text('I'),
+                    inactiveChild: const Text('O'),
+                    initialValue: settingsController.plan == Plan.FREE,
+                    width: 36.w,
+                    height: 18.h,
+                    enabled: false,
+                  ),
                 ),
               ],
             ),

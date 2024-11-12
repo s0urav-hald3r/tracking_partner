@@ -19,9 +19,9 @@ class _GeneralSectionState extends State<GeneralSection> {
   @override
   void initState() {
     super.initState();
-    _controller = ValueNotifier<bool>(settingsController.isFreeTrialEnable);
+    _controller = ValueNotifier<bool>(settingsController.isNotificationEnable);
     _controller.addListener(() {
-      settingsController.isFreeTrialEnable = _controller.value;
+      settingsController.isNotificationEnable = _controller.value;
     });
   }
 

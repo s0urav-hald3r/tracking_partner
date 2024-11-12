@@ -58,7 +58,9 @@ const String pAPIKey =
 //TO DO: add the entitlement ID from the RevenueCat dashboard that is activated upon successful in-app purchase for the duration of the purchase.
 const entitlementID = 'premium_access';
 
-const List<String> planIds = ['pt_5.99_1w_3d0', 'pt_49.99_1y'];
+const String annualPlan = 'pt_49.99_1y';
+const String weeklyPlan = 'pt_5.99_1w_3d0';
+const List<String> planIds = [weeklyPlan, annualPlan];
 
 //TO DO: add your subscription terms and conditions
 const footerText = "Don't forget to add your purchases terms and conditions.";
