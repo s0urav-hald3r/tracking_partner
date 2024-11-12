@@ -3,6 +3,7 @@ import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:tracking_partner/components/purchase_view/key_features.dart';
 import 'package:tracking_partner/components/purchase_view/plan_button.dart';
 import 'package:tracking_partner/components/purchase_view/purchase_links.dart';
@@ -28,6 +29,11 @@ class _PurchaseViewState extends State<PurchaseView> {
 
   @override
   Widget build(BuildContext context) {
+    StoreProduct weekly = settingsController.storeProduct
+        .firstWhere((element) => element.identifier == weeklyPlan);
+    StoreProduct annual = settingsController.storeProduct
+        .firstWhere((element) => element.identifier == annualPlan);
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
@@ -108,12 +114,17 @@ class _PurchaseViewState extends State<PurchaseView> {
               ),
             ),
             SizedBox(height: 10.h),
-            Text(
-              '3 Days free, then auto renewable for 999| week',
-              style: TextStyle(
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-                color: secondaryColor,
+            Obx(
+              () => Text(
+                settingsController.plan == Plan.FREE
+                    ? '3 Days free, then auto renewable for ₹${weekly.price.toStringAsFixed(2)}/week'
+                    : 'Auto-renewable subscription for ₹${annual.price.toStringAsFixed(2)}/year',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w500,
+                  color: secondaryColor,
+                ),
               ),
             ),
             SizedBox(height: 20.h),

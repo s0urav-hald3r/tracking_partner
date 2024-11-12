@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/controllers/settings_controller.dart';
 
 class PurchaseLinks extends StatelessWidget {
   const PurchaseLinks({super.key});
@@ -19,13 +20,16 @@ class PurchaseLinks extends StatelessWidget {
             decoration: TextDecoration.underline,
           ),
         ),
-        Text(
-          'Restore Purchase',
-          style: TextStyle(
-            fontSize: 12.sp,
-            fontWeight: FontWeight.w400,
-            color: greyColor,
-            decoration: TextDecoration.underline,
+        InkWell(
+          onTap: () => SettingsController.instance.restorePurchases(),
+          child: Text(
+            'Restore Purchase',
+            style: TextStyle(
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w400,
+              color: greyColor,
+              decoration: TextDecoration.underline,
+            ),
           ),
         ),
         Text(

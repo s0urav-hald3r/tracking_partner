@@ -46,24 +46,19 @@ class SettingsController extends GetxController {
     }
   }
 
-  // Future purchaseProduct(StoreProduct storeProduct) async {
-  //   try {
-  //     CustomerInfo customerInfo =
-  //         await Purchases.purchaseStoreProduct(storeProduct);
-  //     debugPrint('customerInfo while purchase: $customerInfo');
-  //     _purchasedIndentifier.value = [
-  //       ..._purchasedIndentifier,
-  //       customerInfo.allPurchasedProductIdentifiers.last
-  //     ];
-  //     CustomSnackBar.show('Success',
-  //         message: 'Premium meditation object purchase successful.');
-  //   } on PlatformException catch (e) {
-  //     var errorCode = PurchasesErrorHelper.getErrorCode(e);
-  //     if (errorCode != PurchasesErrorCode.purchaseCancelledError) {
-  //       CustomSnackBar.show('Error', message: e.message, type: 2);
-  //     }
-  //   }
-  // }
+  Future purchaseProduct(StoreProduct storeProduct) async {
+    try {
+      CustomerInfo customerInfo =
+          await Purchases.purchaseStoreProduct(storeProduct);
+      log('customerInfo while purchase: $customerInfo');
+    } on PlatformException catch (e) {
+      var errorCode = PurchasesErrorHelper.getErrorCode(e);
+      if (errorCode != PurchasesErrorCode.purchaseCancelledError) {
+        log('PurchasesErrorCode.purchaseCancelledError');
+        return;
+      }
+    }
+  }
 
   Future restorePurchases() async {
     try {
