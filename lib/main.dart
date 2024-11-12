@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -15,6 +16,21 @@ import 'package:tracking_partner/controllers/settings_controller.dart';
 import 'package:tracking_partner/utlis/local_storage.dart';
 import 'package:tracking_partner/views/dashboard_view.dart';
 import 'package:tracking_partner/views/onboarding_view.dart';
+
+Future<void> _configureSDK() async {
+  // Enable debug logs before calling `configure`.
+  if (kReleaseMode) {
+    await Purchases.setLogLevel(LogLevel.info);
+  } else {
+    await Purchases.setLogLevel(LogLevel.debug);
+  }
+
+  PurchasesConfiguration configuration;
+
+  configuration = PurchasesConfiguration(StoreConfig.instance.apiKey);
+
+  await Purchases.configure(configuration);
+}
 
 Future<void> main() async {
   // Dependency injection
@@ -33,6 +49,8 @@ Future<void> main() async {
       apiKey: appleApiKey,
     );
   }
+
+  await _configureSDK();
 
   runApp(const MyApp());
 }
