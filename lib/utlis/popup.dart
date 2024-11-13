@@ -11,12 +11,12 @@ class TPopup {
       message,
       isDismissible: true,
       shouldIconPulse: true,
-      colorText: Colors.white,
+      colorText: Colors.black54,
       backgroundColor: Colors.greenAccent,
       snackPosition: SnackPosition.BOTTOM,
       duration: const Duration(seconds: 2),
       margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-      icon: const Icon(Icons.thumb_up, color: Colors.white),
+      icon: const Icon(Icons.thumb_up, color: Colors.black54),
     );
   }
 
@@ -27,12 +27,12 @@ class TPopup {
       message,
       isDismissible: true,
       shouldIconPulse: true,
-      colorText: Colors.white,
+      colorText: Colors.black54,
       backgroundColor: primaryColor,
       snackPosition: SnackPosition.BOTTOM,
       duration: const Duration(seconds: 2),
       margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-      icon: const Icon(Icons.warning, color: Colors.white),
+      icon: const Icon(Icons.warning, color: Colors.black54),
     );
   }
 

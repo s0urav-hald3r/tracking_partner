@@ -164,6 +164,14 @@ class HomeController extends GetxController {
       return;
     }
 
+    int index = parcelCardList.indexWhere(
+        (parcel) => parcel.trackingNumber == tNumberController.text);
+
+    if (index != -1) {
+      TPopup.warningSnackbar(message: 'Tracking Id already exists.');
+      return;
+    }
+
     final parcelCardModel = ParcelCardModel(
       packageIcon: parcelIcon,
       trackingNumber: tNumberController.text,
