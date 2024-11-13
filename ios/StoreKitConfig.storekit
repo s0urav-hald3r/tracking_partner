@@ -10,7 +10,7 @@
     "_applicationInternalID" : "6738089871",
     "_developerTeamID" : "QMFJ48V58D",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 753163185.46163595,
+    "_lastSynchronizedDate" : 753198975.17816103,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitErrors" : [
@@ -99,14 +99,7 @@
         },
         {
           "adHocOffers" : [
-            {
-              "internalID" : "FB205D78",
-              "numberOfPeriods" : 1,
-              "offerID" : "pt_5.99_1w_3d0",
-              "paymentMode" : "free",
-              "referenceName" : "Weekly Plan, 3-days Free Trial",
-              "subscriptionPeriod" : "P3D"
-            }
+
           ],
           "codeOffers" : [
 
@@ -115,7 +108,12 @@
           "familyShareable" : false,
           "groupNumber" : 2,
           "internalID" : "6738093948",
-          "introductoryOffer" : null,
+          "introductoryOffer" : {
+            "internalID" : "728EDBD6",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P3D"
+          },
           "localizations" : [
             {
               "description" : "get unlimited access over the week",

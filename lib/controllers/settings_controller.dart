@@ -55,11 +55,11 @@ class SettingsController extends GetxController {
           _storeProduct.add(storeProduct);
 
           debugPrint(
-              'Free Product title: ${storeProduct.discounts?.first.price}');
+              'Free Product title: ${storeProduct.introductoryPrice?.price}');
           debugPrint(
-              'Free Product price: ${storeProduct.discounts?.first.priceString}');
+              'Free Product price: ${storeProduct.introductoryPrice?.priceString}');
           debugPrint(
-              'Free Product duration: ${storeProduct.discounts?.first.period}'); // Should show 3 days
+              'Free Product duration: ${storeProduct.introductoryPrice?.period}'); // Should show 3 days
         }
 
         // Look for the package with a price
