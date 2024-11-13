@@ -52,6 +52,7 @@ dependencies:
   url_launcher: ^6.3.1
   in_app_review: ^2.0.9
   share_plus: ^10.1.2
+  flutter_native_splash: ^2.4.2
 
 dev_dependencies:
   flutter_test:
@@ -66,11 +67,23 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
 
+# App Icon
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/static/icon.png"
   min_sdk_android: 21 # android min sdk min:16, default 21
+
+# Splash Icon
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/static/icon.png
+  android_12:
+    color: "#ffffff"
+    image: assets/static/icon.png
+  android: false
+  ios: true
+  web: false
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
