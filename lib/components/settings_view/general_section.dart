@@ -3,6 +3,7 @@ import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:in_app_review/in_app_review.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/settings_controller.dart';
 
@@ -77,30 +78,36 @@ class _GeneralSectionState extends State<GeneralSection> {
             enabled: true,
           ),
         ]),
-        Row(children: [
-          Container(
-            width: 32.w,
-            height: 32.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.r),
-              color: const Color(0xFFF8F8F8),
+        InkWell(
+          onTap: () async {
+            await Share.share(
+                'Look what I use to track all my parcels in one place:\nhttps://apps.apple.com/app/id6738089871');
+          },
+          child: Row(children: [
+            Container(
+              width: 32.w,
+              height: 32.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.r),
+                color: const Color(0xFFF8F8F8),
+              ),
+              child: Center(
+                child: SvgPicture.asset(share),
+              ),
             ),
-            child: Center(
-              child: SvgPicture.asset(share),
+            SizedBox(width: 10.w),
+            Text(
+              'Share the app',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: textColor,
+                fontWeight: FontWeight.w500,
+              ),
             ),
-          ),
-          SizedBox(width: 10.w),
-          Text(
-            'Share the app',
-            style: TextStyle(
-              fontSize: 12.sp,
-              color: textColor,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          const Spacer(),
-          Icon(Icons.chevron_right, size: 18.sp)
-        ]),
+            const Spacer(),
+            Icon(Icons.chevron_right, size: 18.sp)
+          ]),
+        ),
         InkWell(
           onTap: () async {
             if (await inAppReview.isAvailable()) {
