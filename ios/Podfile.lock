@@ -13,12 +13,15 @@ PODS:
     - Flutter
     - MTBBarcodeScanner
   - RevenueCat (5.2.3)
+  - url_launcher_ios (0.0.1):
+    - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - purchases_flutter (from `.symlinks/plugins/purchases_flutter/ios`)
   - qr_code_scanner (from `.symlinks/plugins/qr_code_scanner/ios`)
+  - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
 
 SPEC REPOS:
   trunk:
@@ -35,6 +38,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/purchases_flutter/ios"
   qr_code_scanner:
     :path: ".symlinks/plugins/qr_code_scanner/ios"
+  url_launcher_ios:
+    :path: ".symlinks/plugins/url_launcher_ios/ios"
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
@@ -44,6 +49,7 @@ SPEC CHECKSUMS:
   PurchasesHybridCommon: 6e5772e574ce345922c42f31403cf72a0ba762bf
   qr_code_scanner: bb67d64904c3b9658ada8c402e8b4d406d5d796e
   RevenueCat: 86e4486345a6f7740fecb1eeff91eeff8708eee1
+  url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
 
 PODFILE CHECKSUM: a57f30d18f102dd3ce366b1d62a55ecbef2158e5
 

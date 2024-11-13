@@ -115,7 +115,7 @@ class _PurchaseViewState extends State<PurchaseView> {
                         () => Text(
                           settingsController.plan == Plan.FREE
                               ? 'Try For FREE'
-                              : 'Purchase Plan',
+                              : 'Continue ≻',
                           style: TextStyle(
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w700,
