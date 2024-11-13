@@ -32,16 +32,18 @@ class _OnboardingViewState extends State<OnboardingView> {
             colors: [primaryColor.withOpacity(.25), Colors.white],
           ),
         ),
-        child: Stack(
-          children: [
-            Column(
-              children: [
-                _buildPageView(),
-                _buildTrackButton(),
-              ],
-            ),
-            Obx(() => _buildPageIndicators()),
-          ],
+        child: Obx(
+          () => Stack(
+            children: [
+              Column(
+                children: [
+                  _buildPageView(),
+                  _buildTrackButton(),
+                ],
+              ),
+              _buildPageIndicators(),
+            ],
+          ),
         ),
       ),
     );
@@ -127,6 +129,15 @@ class _OnboardingViewState extends State<OnboardingView> {
       margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
       child: ElevatedButton(
         onPressed: () {
+          if (onboardingController.index < 3) {
+            onboardingController.index = onboardingController.index + 1;
+            _pageController.animateToPage(
+              onboardingController.index,
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeIn,
+            );
+            return;
+          }
           LocalStorage.addData(isOnboardingDone, true);
 
           // Define action here
@@ -139,7 +150,9 @@ class _OnboardingViewState extends State<OnboardingView> {
           minimumSize: Size(double.infinity, 45.h),
         ),
         child: Text(
-          'Track your first parcel',
+          onboardingController.index < 3
+              ? 'Continue'
+              : 'Track your first parcel',
           style: TextStyle(
             fontSize: 14.sp,
             fontWeight: FontWeight.w700,

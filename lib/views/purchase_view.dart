@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,6 +26,9 @@ class _PurchaseViewState extends State<PurchaseView> {
   void initState() {
     super.initState();
     _controller = ValueNotifier<bool>(settingsController.plan == Plan.FREE);
+    _controller.addListener(() {
+      settingsController.plan = _controller.value ? Plan.FREE : Plan.PAID;
+    });
   }
 
   @override
@@ -36,99 +40,120 @@ class _PurchaseViewState extends State<PurchaseView> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
-        child: Column(
+      body: Obx(
+        () => Stack(
           children: [
-            SizedBox(height: MediaQuery.of(context).padding.top),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: SvgPicture.asset(close),
-                )
-              ],
-            ),
-            SvgPicture.asset(premiumBaner),
-            Text(
-              'Unlock Full  Access',
-              style: TextStyle(
-                fontSize: 24.sp,
-                fontWeight: FontWeight.w700,
-                color: textColor,
-              ),
-            ),
-            SizedBox(height: 20.h),
-            const KeyFeatures(),
-            SizedBox(height: 20.h),
-            const PlanButton(),
-            SizedBox(height: 10.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Free Trial Enabled',
-                  style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
-                    color: textColor,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: Column(
+                children: [
+                  SizedBox(height: MediaQuery.of(context).padding.top),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: SvgPicture.asset(close),
+                      )
+                    ],
                   ),
-                ),
-                Obx(
-                  () => AdvancedSwitch(
-                    controller: _controller,
-                    activeColor: Colors.green,
-                    inactiveColor: Colors.grey,
-                    activeChild: const Text('I'),
-                    inactiveChild: const Text('O'),
-                    initialValue: settingsController.plan == Plan.FREE,
-                    width: 36.w,
-                    height: 18.h,
-                    enabled: false,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 20.h),
-            SizedBox(
-              height: 45.h,
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  // Define action here
-                },
-                child: Obx(
-                  () => Text(
-                    settingsController.plan == Plan.FREE
-                        ? 'Try For FREE'
-                        : 'Purchase Plan',
+                  SvgPicture.asset(premiumBaner),
+                  Text(
+                    'Unlock Full  Access',
                     style: TextStyle(
-                      fontSize: 14.sp,
+                      fontSize: 24.sp,
                       fontWeight: FontWeight.w700,
+                      color: textColor,
                     ),
                   ),
-                ),
+                  SizedBox(height: 20.h),
+                  const KeyFeatures(),
+                  SizedBox(height: 20.h),
+                  const PlanButton(),
+                  SizedBox(height: 10.h),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Free Trial Enabled',
+                        style: TextStyle(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w500,
+                          color: textColor,
+                        ),
+                      ),
+                      Obx(
+                        () => AdvancedSwitch(
+                          controller: _controller,
+                          activeColor: Colors.green,
+                          inactiveColor: Colors.grey,
+                          activeChild: const Text('I'),
+                          inactiveChild: const Text('O'),
+                          initialValue: settingsController.plan == Plan.FREE,
+                          width: 36.w,
+                          height: 18.h,
+                          enabled: true,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20.h),
+                  SizedBox(
+                    height: 45.h,
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Define action here
+                        settingsController.purchaseProduct(
+                            settingsController.plan == Plan.FREE
+                                ? weekly
+                                : annual);
+                      },
+                      child: Obx(
+                        () => Text(
+                          settingsController.plan == Plan.FREE
+                              ? 'Try For FREE'
+                              : 'Purchase Plan',
+                          style: TextStyle(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10.h),
+                  Obx(
+                    () => Text(
+                      settingsController.plan == Plan.FREE
+                          ? '3 Days free, then auto renewable for ₹${weekly.price.toStringAsFixed(2)}/week'
+                          : 'Auto-renewable subscription for ₹${annual.price.toStringAsFixed(2)}/year',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w500,
+                        color: secondaryColor,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20.h),
+                  const PurchaseLinks()
+                ],
               ),
             ),
-            SizedBox(height: 10.h),
-            Obx(
-              () => Text(
-                settingsController.plan == Plan.FREE
-                    ? '3 Days free, then auto renewable for ₹${weekly.price.toStringAsFixed(2)}/week'
-                    : 'Auto-renewable subscription for ₹${annual.price.toStringAsFixed(2)}/year',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w500,
-                  color: secondaryColor,
+            if (settingsController.isLoading)
+              Container(
+                width: double.infinity,
+                height: double.infinity,
+                color: Colors.black38,
+                child: const Center(
+                  child: CupertinoActivityIndicator(
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-            ),
-            SizedBox(height: 20.h),
-            const PurchaseLinks()
+              )
           ],
         ),
       ),

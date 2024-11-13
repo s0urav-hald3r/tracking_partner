@@ -33,6 +33,8 @@ Future<void> _configureSDK() async {
 }
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   // Dependency injection
   Get.lazyPut(() => OnboardingController());
   Get.lazyPut(() => DashboardController());

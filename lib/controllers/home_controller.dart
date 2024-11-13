@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart' hide Response;
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/config/navigation.dart';
+import 'package:tracking_partner/controllers/settings_controller.dart';
 import 'package:tracking_partner/models/parcel_card_model.dart';
 import 'package:tracking_partner/models/parcel_details_model.dart';
 import 'package:tracking_partner/services/dio_client.dart';
@@ -28,6 +29,8 @@ class HomeController extends GetxController {
     parcelIcon = parcelIcons[iconIndex];
     retriveParcels();
     loadCsvData();
+    SettingsController.instance.ifPremium =
+        LocalStorage.getData(isPremium, KeyType.BOOL);
   }
 
   Future<void> retriveParcels() async {

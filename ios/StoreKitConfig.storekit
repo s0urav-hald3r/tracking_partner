@@ -1,0 +1,139 @@
+{
+  "identifier" : "5BD1F4EF",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6738089871",
+    "_developerTeamID" : "QMFJ48V58D",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 753163185.46163595,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : {
+          "index" : 2,
+          "type" : "generic"
+        },
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21580318",
+      "localizations" : [
+
+      ],
+      "name" : "premium_access",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "49.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6738093237",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "get unlimited access over the year",
+              "displayName" : "Annual Plan",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "pt_49.99_1y",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual Plan",
+          "subscriptionGroupID" : "21580318",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+            {
+              "internalID" : "FB205D78",
+              "numberOfPeriods" : 1,
+              "offerID" : "pt_5.99_1w_3d0",
+              "paymentMode" : "free",
+              "referenceName" : "Weekly Plan, 3-days Free Trial",
+              "subscriptionPeriod" : "P3D"
+            }
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "5.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6738093948",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "get unlimited access over the week",
+              "displayName" : "Weekly Plan",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "pt_5.99_1w_3d0",
+          "recurringSubscriptionPeriod" : "P1W",
+          "referenceName" : "Weekly Plan, 3-days free",
+          "subscriptionGroupID" : "21580318",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

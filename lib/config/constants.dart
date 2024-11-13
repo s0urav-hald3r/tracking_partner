@@ -48,6 +48,7 @@ const Color greyColor = Color(0xFF828282);
 
 // Storage contants
 const String isOnboardingDone = 'isOnboardingDone';
+const String isPremium = 'isPremium';
 const String parcelList = 'parcelList';
 
 // API keys
