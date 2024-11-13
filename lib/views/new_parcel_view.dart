@@ -8,6 +8,7 @@ import 'package:tracking_partner/components/new_parcel_view/package_icon_section
 import 'package:tracking_partner/components/new_parcel_view/tracking_number_section.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/home_controller.dart';
+import 'package:tracking_partner/controllers/settings_controller.dart';
 import 'package:tracking_partner/views/purchase_view.dart';
 
 class NewParcelView extends StatefulWidget {
@@ -24,7 +25,8 @@ class _NewParcelViewState extends State<NewParcelView> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (controller.parcelCardList.length == 1) {
+      if (controller.parcelCardList.length == 1 &&
+          !SettingsController.instance.ifPremium) {
         Navigator.push(
           context,
           CupertinoPageRoute(builder: (context) => const PurchaseView()),
