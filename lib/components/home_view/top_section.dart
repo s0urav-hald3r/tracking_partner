@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tracking_partner/config/constants.dart';
+import 'package:tracking_partner/controllers/home_controller.dart';
 import 'package:tracking_partner/views/new_parcel_view.dart';
 import 'package:tracking_partner/views/scan_view.dart';
 
@@ -11,6 +12,8 @@ class TopSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = HomeController.instance;
+
     return Container(
       width: double.infinity,
       height: 180.h,
@@ -69,6 +72,18 @@ class TopSection extends StatelessWidget {
                 child: SizedBox(
                   height: 45.h,
                   child: CupertinoTextField(
+                    controller: controller.tNumberController,
+                    textCapitalization: TextCapitalization.sentences,
+                    keyboardType: TextInputType.name,
+                    textInputAction: TextInputAction.search,
+                    onSubmitted: (value) {
+                      controller.detectPartner();
+                      Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                            builder: (context) => const NewParcelView()),
+                      );
+                    },
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10.r),
@@ -93,11 +108,13 @@ class TopSection extends StatelessWidget {
               ),
               SizedBox(width: 10.w),
               InkWell(
-                onTap: () {
-                  Navigator.push(
+                onTap: () async {
+                  String trackingId = await Navigator.push(
                     context,
                     CupertinoPageRoute(builder: (context) => const ScanView()),
                   );
+
+                  controller.fillTextField(trackingId: trackingId);
                 },
                 child: Container(
                   width: 45.w,

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -7,6 +8,7 @@ import 'package:tracking_partner/components/new_parcel_view/package_icon_section
 import 'package:tracking_partner/components/new_parcel_view/tracking_number_section.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/home_controller.dart';
+import 'package:tracking_partner/views/purchase_view.dart';
 
 class NewParcelView extends StatefulWidget {
   const NewParcelView({super.key});
@@ -19,9 +21,29 @@ class _NewParcelViewState extends State<NewParcelView> {
   final controller = HomeController.instance;
 
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (controller.parcelCardList.length == 1) {
+        Navigator.push(
+          context,
+          CupertinoPageRoute(builder: (context) => const PurchaseView()),
+        ).then((_) {
+          // After pop, navigate back to home
+          if (mounted) {
+            Navigator.pop(context);
+          }
+        });
+      }
+    });
+  }
+
+  @override
   void dispose() {
     super.dispose();
-    controller.clearState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      controller.clearState();
+    });
   }
 
   @override

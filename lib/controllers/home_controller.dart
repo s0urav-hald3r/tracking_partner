@@ -119,6 +119,12 @@ class HomeController extends GetxController {
   set carrierData(newData) => _carrierData.value = newData;
   set parcelCardList(newData) => _parcelCardList.value = newData;
 
+  void fillTextField({String? trackingId}) {
+    if (trackingId != null) {
+      tNumberController.text = trackingId;
+    }
+  }
+
   // Function for API calls
   Future<void> detectPartner({String? trackingId}) async {
     try {
