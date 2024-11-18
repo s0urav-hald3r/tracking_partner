@@ -23,14 +23,14 @@ class HomeController extends GetxController {
   final tNumberController = TextEditingController();
   final pNameController = TextEditingController();
 
+  final controller = SettingsController.instance;
+
   @override
   void onInit() {
     super.onInit();
     parcelIcon = parcelIcons[iconIndex];
     retriveParcels();
     loadCsvData();
-    SettingsController.instance.ifPremium =
-        LocalStorage.getData(isPremium, KeyType.BOOL);
   }
 
   Future<void> retriveParcels() async {
@@ -44,6 +44,10 @@ class HomeController extends GetxController {
     } else {
       parcelCardList = <ParcelCardModel>[];
     }
+    debugPrint('parcelCardList: ${parcelCardList.length}');
+
+    controller.ifPremium = LocalStorage.getData(isPremium, KeyType.BOOL);
+    debugPrint('controller.ifPremium: ${controller.ifPremium}');
 
     isLoading = false;
   }

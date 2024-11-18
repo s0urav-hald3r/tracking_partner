@@ -128,8 +128,8 @@ class _PurchaseViewState extends State<PurchaseView> {
                   Obx(
                     () => Text(
                       settingsController.plan == Plan.FREE
-                          ? '3 Days free, then auto renewable for ₹${weekly.price.toStringAsFixed(2)}/week'
-                          : 'Auto-renewable subscription for ₹${annual.price.toStringAsFixed(2)}/year',
+                          ? '3 Days free, then auto renewable for ${weekly.priceString}/week'
+                          : 'Auto-renewable subscription for ${annual.priceString}/year',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 12.sp,

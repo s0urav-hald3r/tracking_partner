@@ -11,8 +11,8 @@ class SettingsController extends GetxController {
   static SettingsController get instance => Get.find();
 
   @override
-  void onReady() {
-    super.onReady();
+  void onInit() {
+    super.onInit();
     fetchProducts();
   }
 

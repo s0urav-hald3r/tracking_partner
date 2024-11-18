@@ -1,9 +1,29 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:tracking_partner/config/constants.dart';
 import 'package:tracking_partner/controllers/settings_controller.dart';
+
+String locale = window.locale.toString(); // e.g., 'en_US', 'en_IN'
+
+/// Converts an annual price to a weekly price and formats it with a currency symbol.
+String convertAnnualToWeekly({
+  required double annualPrice,
+  required String currencyCode,
+  required String locale,
+}) {
+  // Convert annual price to weekly price (52 weeks in a year)
+  double weeklyPrice = annualPrice / 52;
+
+  // Format the price with the currency symbol
+  final format =
+      NumberFormat.simpleCurrency(locale: locale, name: currencyCode);
+  return format.format(weeklyPrice);
+}
 
 class PlanButton extends StatelessWidget {
   const PlanButton({super.key});
@@ -14,8 +34,17 @@ class PlanButton extends StatelessWidget {
 
     return Obx(
       () {
-        StoreProduct plan = controller.storeProduct
+        StoreProduct aPlan = controller.storeProduct
             .firstWhere((element) => element.identifier == annualPlan);
+
+        StoreProduct wPlan = controller.storeProduct
+            .firstWhere((element) => element.identifier == weeklyPlan);
+
+        // String price = convertAnnualToWeekly(
+        //   annualPrice: aPlan.price,
+        //   currencyCode: aPlan.currencyCode,
+        //   locale: locale,
+        // );
 
         return Column(
           children: [
@@ -47,26 +76,13 @@ class PlanButton extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          '₹${(plan.price / 52).toStringAsFixed(2)}',
-                          style: TextStyle(
-                            fontSize: 17.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor,
-                          ),
-                        ),
-                        Text(
-                          'Per Week',
-                          style: TextStyle(
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w500,
-                            color: greyColor,
-                          ),
-                        ),
-                      ],
+                    Text(
+                      aPlan.priceString,
+                      style: TextStyle(
+                        fontSize: 17.sp,
+                        fontWeight: FontWeight.w700,
+                        color: textColor,
+                      ),
                     ),
                   ],
                 ),
@@ -94,7 +110,7 @@ class PlanButton extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '3 Days Trial',
+                      'Weekly Plan',
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w700,
@@ -102,7 +118,7 @@ class PlanButton extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Free',
+                      wPlan.priceString,
                       style: TextStyle(
                         fontSize: 17.sp,
                         fontWeight: FontWeight.w800,

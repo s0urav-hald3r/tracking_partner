@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -33,16 +34,8 @@ Future<void> _configureSDK() async {
 }
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  // Dependency injection
-  Get.lazyPut(() => OnboardingController());
-  Get.lazyPut(() => DashboardController());
-  Get.lazyPut(() => HomeController());
-  Get.lazyPut(() => SettingsController());
-
-  // Initialize storage
-  await GetStorage.init();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // Configure store for in-app purchase
   if (Platform.isIOS) {
@@ -53,6 +46,18 @@ Future<void> main() async {
   }
 
   await _configureSDK();
+
+  // Dependency injection
+  Get.lazyPut(() => OnboardingController());
+  Get.lazyPut(() => DashboardController());
+  Get.put(SettingsController());
+  Get.put(HomeController());
+
+  // Initialize storage
+  await GetStorage.init();
+
+  // whenever your initialization is completed, remove the splash screen:
+  FlutterNativeSplash.remove();
 
   runApp(const MyApp());
 }

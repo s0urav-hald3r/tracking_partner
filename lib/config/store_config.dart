@@ -6,8 +6,7 @@ class StoreConfig {
   static StoreConfig? _instance;
 
   factory StoreConfig({required Store store, required String apiKey}) {
-    _instance ??= StoreConfig._internal(store, apiKey);
-    return _instance!;
+    return _instance ??= StoreConfig._internal(store, apiKey);
   }
 
   StoreConfig._internal(this.store, this.apiKey);
