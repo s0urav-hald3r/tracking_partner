@@ -199,11 +199,11 @@ class HomeController extends GetxController {
 
   Future<ParcelDetailsModel?> getParcelDetails(trackingId) async {
     try {
-      ParcelDetailsModel parcelDetailsModel;
+      ParcelDetailsModel parcel;
 
       isDetailsLoading = true;
 
-      Response responseOne = await _dioClient
+      Response response = await _dioClient
           .post('https://parcelsapp.com/api/v3/shipments/tracking', body: {
         "shipments": [
           {"trackingId": trackingId, "destinationCountry": "MOCK_COUNTRY"}
@@ -212,24 +212,45 @@ class HomeController extends GetxController {
         "apiKey": pAPIKey
       });
 
-      parcelDetailsModel = ParcelDetailsModel.fromJson(responseOne.data);
+      parcel = ParcelDetailsModel.fromJson(response.data);
 
-      if (parcelDetailsModel.uuid != null) {
-        Response responseTwo = await _dioClient.get(
-            'https://parcelsapp.com/api/v3/shipments/tracking?uuid=${parcelDetailsModel.uuid}&apiKey=$pAPIKey');
+      if (parcel.uuid != null) {
+        Response response = await _dioClient.get(
+            'https://parcelsapp.com/api/v3/shipments/tracking?uuid=${parcel.uuid}&apiKey=$pAPIKey');
 
-        parcelDetailsModel = ParcelDetailsModel.fromJson(responseTwo.data);
+        parcel = ParcelDetailsModel.fromJson(response.data);
+
+        parcel = await recursiveApiCall(parcel, 1);
 
         isDetailsLoading = false;
-        return parcelDetailsModel;
+        return parcel;
       }
 
       isDetailsLoading = false;
-      return parcelDetailsModel;
+      return parcel;
     } catch (e) {
       isDetailsLoading = false;
       return null;
     }
+  }
+
+  Future<ParcelDetailsModel> recursiveApiCall(
+      ParcelDetailsModel p, int times) async {
+    debugPrint('recursiveApiCall count: $times');
+    if (times >= 5) return p;
+
+    times++;
+
+    if (p.shipments.isNotEmpty && p.shipments.first.states.isNotEmpty) {
+      return p;
+    }
+
+    Response response = await _dioClient.get(
+        'https://parcelsapp.com/api/v3/shipments/tracking?uuid=${p.uuid}&apiKey=$pAPIKey');
+
+    p = ParcelDetailsModel.fromJson(response.data);
+
+    return recursiveApiCall(p, times);
   }
 
   clearState() {

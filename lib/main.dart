@@ -37,6 +37,9 @@ Future<void> main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
+  // Initialize storage
+  await GetStorage.init();
+
   // Configure store for in-app purchase
   if (Platform.isIOS) {
     StoreConfig(
@@ -52,9 +55,6 @@ Future<void> main() async {
   Get.lazyPut(() => DashboardController());
   Get.put(SettingsController());
   Get.put(HomeController());
-
-  // Initialize storage
-  await GetStorage.init();
 
   // whenever your initialization is completed, remove the splash screen:
   FlutterNativeSplash.remove();
